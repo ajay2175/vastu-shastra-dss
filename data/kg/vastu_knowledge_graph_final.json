@@ -1,0 +1,3818 @@
+{
+  "metadata": {
+    "version": "2.0",
+    "created": "2026-10-08T16:46:18.289831",
+    "description": "Vastu Shastra Finalized Knowledge Graph with extended nodes and relations",
+    "total_nodes": 138,
+    "total_edges": 213,
+    "entity_types": 13,
+    "relation_types": 24,
+    "source": "Classical Vastu texts + seed KG expansion",
+    "confidence": "high"
+  },
+  "nodes": [
+    {
+      "id": "direction_north",
+      "type": "direction",
+      "label": "North",
+      "properties": {
+        "element": "water",
+        "cardinal": "north",
+        "hemisphere": "northern",
+        "associated_dosha": [
+          "kapha"
+        ],
+        "optimal_rooms": [
+          "office",
+          "study",
+          "entrance"
+        ],
+        "colors": [
+          "blue",
+          "black",
+          "white"
+        ],
+        "ruling_planet": "mercury",
+        "chakra": "root",
+        "period_mentioned": [
+          "mayamatam_ch2",
+          "brihat_samhita_ch56"
+        ],
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "direction_northeast",
+      "type": "direction",
+      "label": "Northeast",
+      "properties": {
+        "element": "fire_water_combination",
+        "cardinal": "northeast",
+        "hemisphere": "northern",
+        "associated_dosha": [
+          "pitta"
+        ],
+        "optimal_rooms": [
+          "puja_room",
+          "entrance"
+        ],
+        "colors": [
+          "yellow",
+          "orange",
+          "white"
+        ],
+        "ruling_planet": "venus",
+        "chakra": "third_eye",
+        "sacred_spot": true,
+        "period_mentioned": [
+          "mayamatam_ch2"
+        ],
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "direction_east",
+      "type": "direction",
+      "label": "East",
+      "properties": {
+        "element": "air",
+        "cardinal": "east",
+        "hemisphere": "eastern",
+        "associated_dosha": [
+          "vata"
+        ],
+        "optimal_rooms": [
+          "entrance",
+          "study"
+        ],
+        "colors": [
+          "red",
+          "green"
+        ],
+        "ruling_planet": "sun",
+        "chakra": "heart",
+        "period_mentioned": [
+          "brihat_samhita_ch56"
+        ],
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "direction_southeast",
+      "type": "direction",
+      "label": "Southeast",
+      "properties": {
+        "element": "fire",
+        "cardinal": "southeast",
+        "hemisphere": "eastern",
+        "associated_dosha": [
+          "pitta"
+        ],
+        "optimal_rooms": [
+          "kitchen"
+        ],
+        "colors": [
+          "red",
+          "orange"
+        ],
+        "ruling_planet": "venus",
+        "chakra": "solar_plexus",
+        "period_mentioned": [
+          "mayamatam_ch3"
+        ],
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "direction_south",
+      "type": "direction",
+      "label": "South",
+      "properties": {
+        "element": "earth",
+        "cardinal": "south",
+        "hemisphere": "southern",
+        "associated_dosha": [
+          "kapha"
+        ],
+        "optimal_rooms": [
+          "bedroom",
+          "master_bedroom"
+        ],
+        "colors": [
+          "brown",
+          "red"
+        ],
+        "ruling_planet": "mars",
+        "chakra": "root",
+        "period_mentioned": [
+          "brihat_samhita_ch56"
+        ],
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "direction_southwest",
+      "type": "direction",
+      "label": "Southwest",
+      "properties": {
+        "element": "earth",
+        "cardinal": "southwest",
+        "hemisphere": "southern",
+        "associated_dosha": [
+          "kapha"
+        ],
+        "optimal_rooms": [],
+        "avoid_rooms": [
+          "kitchen",
+          "puja_room"
+        ],
+        "colors": [
+          "brown",
+          "red"
+        ],
+        "ruling_planet": "venus",
+        "chakra": "root",
+        "heavy_zone": true,
+        "period_mentioned": [
+          "mayamatam_ch2"
+        ],
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "direction_west",
+      "type": "direction",
+      "label": "West",
+      "properties": {
+        "element": "water",
+        "cardinal": "west",
+        "hemisphere": "western",
+        "associated_dosha": [
+          "vata"
+        ],
+        "optimal_rooms": [
+          "bedroom"
+        ],
+        "colors": [
+          "blue",
+          "white"
+        ],
+        "ruling_planet": "saturn",
+        "chakra": "sacral",
+        "period_mentioned": [
+          "brihat_samhita_ch56"
+        ],
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "direction_northwest",
+      "type": "direction",
+      "label": "Northwest",
+      "properties": {
+        "element": "air",
+        "cardinal": "northwest",
+        "hemisphere": "western",
+        "associated_dosha": [
+          "vata"
+        ],
+        "optimal_rooms": [],
+        "avoid_rooms": [
+          "kitchen",
+          "puja_room",
+          "toilet"
+        ],
+        "colors": [
+          "white",
+          "grey"
+        ],
+        "ruling_planet": "moon",
+        "chakra": "heart",
+        "gate_of_wind": true,
+        "period_mentioned": [
+          "mayamatam_ch2"
+        ],
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "direction_center",
+      "type": "direction",
+      "label": "Center (Brahma Sthan)",
+      "properties": {
+        "element": "space",
+        "cardinal": "center",
+        "hemisphere": "central",
+        "associated_dosha": [],
+        "optimal_rooms": [
+          "center",
+          "courtyard"
+        ],
+        "avoid_rooms": [
+          "kitchen",
+          "toilet",
+          "storeroom"
+        ],
+        "sacred_spot": true,
+        "chakra": "crown",
+        "period_mentioned": [
+          "mayamatam_ch1"
+        ],
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "room_bedroom",
+      "type": "room",
+      "label": "Bedroom",
+      "properties": {
+        "purpose": "rest_sleep",
+        "privacy": "high",
+        "light_requirement": "dim",
+        "ventilation": "moderate",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "room_kitchen",
+      "type": "room",
+      "label": "Kitchen",
+      "properties": {
+        "purpose": "cooking_food_preparation",
+        "fire_element": true,
+        "ventilation": "high",
+        "optimal_location": "southeast",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "room_puja",
+      "type": "room",
+      "label": "Puja Room (Prayer Room)",
+      "properties": {
+        "purpose": "worship_meditation",
+        "privacy": "medium",
+        "sacred": true,
+        "light_requirement": "bright",
+        "optimal_location": "northeast",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "room_living",
+      "type": "room",
+      "label": "Living Room",
+      "properties": {
+        "purpose": "family_gathering",
+        "light_requirement": "bright",
+        "ventilation": "good",
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "room_office",
+      "type": "room",
+      "label": "Office/Study Room",
+      "properties": {
+        "purpose": "work_learning",
+        "light_requirement": "bright",
+        "concentration_needed": true,
+        "optimal_location": "north",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "element_water",
+      "type": "element",
+      "label": "Water",
+      "properties": {
+        "associated_directions": [
+          "north",
+          "west"
+        ],
+        "properties": [
+          "cool",
+          "flowing",
+          "nourishing"
+        ],
+        "dosha_correlation": "kapha_pitta",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "element_fire",
+      "type": "element",
+      "label": "Fire",
+      "properties": {
+        "associated_directions": [
+          "southeast"
+        ],
+        "properties": [
+          "warm",
+          "transformative",
+          "energizing"
+        ],
+        "dosha_correlation": "pitta",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "element_earth",
+      "type": "element",
+      "label": "Earth",
+      "properties": {
+        "associated_directions": [
+          "south",
+          "southwest"
+        ],
+        "properties": [
+          "stable",
+          "grounding",
+          "nourishing"
+        ],
+        "dosha_correlation": "kapha",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "element_air",
+      "type": "element",
+      "label": "Air",
+      "properties": {
+        "associated_directions": [
+          "east",
+          "northwest"
+        ],
+        "properties": [
+          "light",
+          "moving",
+          "communicative"
+        ],
+        "dosha_correlation": "vata",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "element_space",
+      "type": "element",
+      "label": "Space (Akasha)",
+      "properties": {
+        "associated_directions": [
+          "center"
+        ],
+        "properties": [
+          "expansive",
+          "connecting",
+          "void"
+        ],
+        "dosha_correlation": "all",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "color_blue",
+      "type": "color",
+      "label": "Blue",
+      "properties": {
+        "associated_directions": [
+          "north",
+          "west"
+        ],
+        "associated_element": "water",
+        "dosha_impact": "kapha_vata_calming",
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "color_yellow",
+      "type": "color",
+      "label": "Yellow",
+      "properties": {
+        "associated_directions": [
+          "northeast"
+        ],
+        "associated_element": "earth",
+        "dosha_impact": "all_positive",
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "color_red",
+      "type": "color",
+      "label": "Red",
+      "properties": {
+        "associated_directions": [
+          "southeast",
+          "south"
+        ],
+        "associated_element": "fire_earth",
+        "dosha_impact": "pitta_agitating",
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "dosha_blocked_entry",
+      "type": "vastu_dosha",
+      "label": "Blocked Entry",
+      "properties": {
+        "location": "main_door",
+        "severity": "high",
+        "health_impacts": [
+          "anxiety",
+          "stress",
+          "financial_loss"
+        ],
+        "affected_rooms": [
+          "all"
+        ],
+        "textual_source": "mayamatam",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "dosha_central_pit",
+      "type": "vastu_dosha",
+      "label": "Central Pit (Brahma Sthan Defect)",
+      "properties": {
+        "location": "center",
+        "severity": "critical",
+        "health_impacts": [
+          "financial_loss",
+          "family_discord",
+          "health_issues"
+        ],
+        "affected_rooms": [
+          "center"
+        ],
+        "textual_source": "mayamatam",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "dosha_northwest_toilet",
+      "type": "vastu_dosha",
+      "label": "Northwest Toilet",
+      "properties": {
+        "location": "northwest",
+        "room": "toilet",
+        "severity": "high",
+        "health_impacts": [
+          "respiratory_problems",
+          "financial_loss",
+          "anxiety"
+        ],
+        "textual_source": "brihat_samhita",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "remedy_mirror",
+      "type": "remedy",
+      "label": "Place Mirror",
+      "properties": {
+        "application": "general",
+        "corrects_doshas": [
+          "blocked_entry",
+          "dark_areas"
+        ],
+        "cost": "low",
+        "effectiveness": "high",
+        "mechanism": "reflects_light_energy",
+        "textual_source": "aparajita_priccha",
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "remedy_water_fountain",
+      "type": "remedy",
+      "label": "Water Fountain",
+      "properties": {
+        "application": "north_east_directions",
+        "corrects_doshas": [
+          "poor_fortune",
+          "stagnant_energy"
+        ],
+        "element": "water",
+        "cost": "medium",
+        "effectiveness": "high",
+        "mechanism": "activates_water_element",
+        "textual_source": "vastu_vidya",
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "remedy_light_colors",
+      "type": "remedy",
+      "label": "Use Light Colors",
+      "properties": {
+        "application": "walls_ceiling",
+        "corrects_doshas": [
+          "heaviness",
+          "darkness"
+        ],
+        "cost": "low",
+        "effectiveness": "medium",
+        "mechanism": "brightens_space",
+        "confidence": 0.85
+      }
+    },
+    {
+      "id": "remedy_salt",
+      "type": "remedy",
+      "label": "Salt Remedy",
+      "properties": {
+        "application": "corners_negative_areas",
+        "corrects_doshas": [
+          "negative_energy",
+          "blocked_entry"
+        ],
+        "cost": "very_low",
+        "effectiveness": "medium",
+        "mechanism": "absorbs_negative_energy",
+        "textual_source": "vastu_vidya",
+        "confidence": 0.75
+      }
+    },
+    {
+      "id": "remedy_wind_chime",
+      "type": "remedy",
+      "label": "Wind Chime",
+      "properties": {
+        "application": "northwest_west",
+        "corrects_doshas": [
+          "stagnant_energy"
+        ],
+        "element": "air",
+        "cost": "low",
+        "effectiveness": "medium",
+        "mechanism": "activates_air_movement",
+        "confidence": 0.8
+      }
+    },
+    {
+      "id": "health_anxiety",
+      "type": "health_impact",
+      "label": "Anxiety and Stress",
+      "properties": {
+        "ayurvedic_type": "vata_pitta_imbalance",
+        "severity": "medium",
+        "common_vastu_causes": [
+          "blocked_entry",
+          "dark_spaces"
+        ],
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "health_insomnia",
+      "type": "health_impact",
+      "label": "Insomnia and Sleep Disorders",
+      "properties": {
+        "ayurvedic_type": "vata_imbalance",
+        "severity": "high",
+        "common_vastu_causes": [
+          "wrong_bed_position",
+          "beam_above_head"
+        ],
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "health_financial_loss",
+      "type": "health_impact",
+      "label": "Financial Loss",
+      "properties": {
+        "ayurvedic_type": "economic_wellbeing",
+        "severity": "high",
+        "common_vastu_causes": [
+          "central_pit",
+          "blocked_entry",
+          "west_main_door"
+        ],
+        "confidence": 0.85
+      }
+    },
+    {
+      "id": "health_respiratory",
+      "type": "health_impact",
+      "label": "Respiratory Problems",
+      "properties": {
+        "ayurvedic_type": "kapha_imbalance",
+        "severity": "medium",
+        "common_vastu_causes": [
+          "northwest_toilet",
+          "poor_ventilation"
+        ],
+        "confidence": 0.85
+      }
+    },
+    {
+      "id": "dosha_correlation_vata",
+      "type": "dosha_correlation",
+      "label": "Vata",
+      "properties": {
+        "associated_elements": [
+          "air",
+          "space"
+        ],
+        "associated_directions": [
+          "east",
+          "northwest"
+        ],
+        "qualities": [
+          "light",
+          "dry",
+          "mobile",
+          "cold"
+        ],
+        "body_type": "ectomorph",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "dosha_correlation_pitta",
+      "type": "dosha_correlation",
+      "label": "Pitta",
+      "properties": {
+        "associated_elements": [
+          "fire"
+        ],
+        "associated_directions": [
+          "southeast"
+        ],
+        "qualities": [
+          "hot",
+          "sharp",
+          "liquid",
+          "mobile"
+        ],
+        "body_type": "mesomorph",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "dosha_correlation_kapha",
+      "type": "dosha_correlation",
+      "label": "Kapha",
+      "properties": {
+        "associated_elements": [
+          "earth",
+          "water"
+        ],
+        "associated_directions": [
+          "south",
+          "southwest",
+          "north"
+        ],
+        "qualities": [
+          "heavy",
+          "cold",
+          "stable",
+          "oily"
+        ],
+        "body_type": "endomorph",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "chakra_root",
+      "type": "chakra",
+      "label": "Root Chakra (Muladhara)",
+      "properties": {
+        "location": "base_spine",
+        "element": "earth",
+        "color": "red",
+        "associated_directions": [
+          "south",
+          "southwest"
+        ],
+        "grounding": true,
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "chakra_sacral",
+      "type": "chakra",
+      "label": "Sacral Chakra (Svadhishthana)",
+      "properties": {
+        "location": "lower_abdomen",
+        "element": "water",
+        "color": "orange",
+        "associated_directions": [
+          "west"
+        ],
+        "creativity": true,
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "chakra_solar",
+      "type": "chakra",
+      "label": "Solar Plexus Chakra (Manipura)",
+      "properties": {
+        "location": "navel",
+        "element": "fire",
+        "color": "yellow",
+        "associated_directions": [
+          "southeast"
+        ],
+        "power": true,
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "chakra_heart",
+      "type": "chakra",
+      "label": "Heart Chakra (Anahata)",
+      "properties": {
+        "location": "heart",
+        "element": "air",
+        "color": "green",
+        "associated_directions": [
+          "east",
+          "northwest"
+        ],
+        "compassion": true,
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "chakra_third_eye",
+      "type": "chakra",
+      "label": "Third Eye Chakra (Ajna)",
+      "properties": {
+        "location": "forehead",
+        "element": "space",
+        "color": "indigo",
+        "associated_directions": [
+          "northeast"
+        ],
+        "intuition": true,
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "text_mayamatam",
+      "type": "text_source",
+      "label": "Mayamatam",
+      "properties": {
+        "author": "Maya",
+        "language": "sanskrit",
+        "chapters": 36,
+        "focus": "temple_architecture",
+        "also_covers": [
+          "domestic_architecture",
+          "vastu"
+        ],
+        "period": "5th_century_ce",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "text_brihat_samhita",
+      "type": "text_source",
+      "label": "Brihat Samhita",
+      "properties": {
+        "author": "Varahamihira",
+        "language": "sanskrit",
+        "chapters": 105,
+        "focus": "astronomy_astrology",
+        "also_covers": [
+          "vastu_architecture"
+        ],
+        "period": "6th_century_ce",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "text_aparajita",
+      "type": "text_source",
+      "label": "Aparajita Priccha",
+      "properties": {
+        "author": "Bhallabhatta",
+        "language": "sanskrit",
+        "focus": "temple_domestic_architecture",
+        "also_covers": [
+          "vastu_principles"
+        ],
+        "period": "11th_century_ce",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "room_guest_room",
+      "type": "room",
+      "label": "Guest Room",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "room_servant_quarter",
+      "type": "room",
+      "label": "Servant Quarter",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "room_store_room",
+      "type": "room",
+      "label": "Store Room",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "room_attic",
+      "type": "room",
+      "label": "Attic",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "room_basement",
+      "type": "room",
+      "label": "Basement",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "room_garage",
+      "type": "room",
+      "label": "Garage",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "room_fountain",
+      "type": "room",
+      "label": "Fountain Area",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "room_pathway",
+      "type": "room",
+      "label": "Pathway",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "room_staircase",
+      "type": "room",
+      "label": "Staircase",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "room_entrance_foyer",
+      "type": "room",
+      "label": "Entrance Foyer",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "remedy_pyramid",
+      "type": "remedy",
+      "label": "Pyramid",
+      "properties": {
+        "confidence": 0.8,
+        "extracted": true
+      }
+    },
+    {
+      "id": "remedy_yantra",
+      "type": "remedy",
+      "label": "Yantra",
+      "properties": {
+        "confidence": 0.8,
+        "extracted": true
+      }
+    },
+    {
+      "id": "remedy_mandala",
+      "type": "remedy",
+      "label": "Mandala",
+      "properties": {
+        "confidence": 0.8,
+        "extracted": true
+      }
+    },
+    {
+      "id": "remedy_plant",
+      "type": "remedy",
+      "label": "Plant",
+      "properties": {
+        "confidence": 0.8,
+        "extracted": true
+      }
+    },
+    {
+      "id": "remedy_flower",
+      "type": "remedy",
+      "label": "Flower",
+      "properties": {
+        "confidence": 0.8,
+        "extracted": true
+      }
+    },
+    {
+      "id": "remedy_tree",
+      "type": "remedy",
+      "label": "Tree",
+      "properties": {
+        "confidence": 0.8,
+        "extracted": true
+      }
+    },
+    {
+      "id": "remedy_crystal",
+      "type": "remedy",
+      "label": "Crystal",
+      "properties": {
+        "confidence": 0.8,
+        "extracted": true
+      }
+    },
+    {
+      "id": "remedy_bell",
+      "type": "remedy",
+      "label": "Bell",
+      "properties": {
+        "confidence": 0.8,
+        "extracted": true
+      }
+    },
+    {
+      "id": "remedy_incense",
+      "type": "remedy",
+      "label": "Incense",
+      "properties": {
+        "confidence": 0.8,
+        "extracted": true
+      }
+    },
+    {
+      "id": "remedy_statue",
+      "type": "remedy",
+      "label": "Statue",
+      "properties": {
+        "confidence": 0.8,
+        "extracted": true
+      }
+    },
+    {
+      "id": "remedy_ring",
+      "type": "remedy",
+      "label": "Ring",
+      "properties": {
+        "confidence": 0.8,
+        "extracted": true
+      }
+    },
+    {
+      "id": "remedy_gemstone",
+      "type": "remedy",
+      "label": "Gemstone",
+      "properties": {
+        "confidence": 0.8,
+        "extracted": true
+      }
+    },
+    {
+      "id": "remedy_art",
+      "type": "remedy",
+      "label": "Art Painting",
+      "properties": {
+        "confidence": 0.8,
+        "extracted": true
+      }
+    },
+    {
+      "id": "remedy_fountain_water",
+      "type": "remedy",
+      "label": "Water Fountain",
+      "properties": {
+        "confidence": 0.8,
+        "extracted": true
+      }
+    },
+    {
+      "id": "remedy_vastu_correction",
+      "type": "remedy",
+      "label": "Vastu Correction",
+      "properties": {
+        "confidence": 0.8,
+        "extracted": true
+      }
+    },
+    {
+      "id": "remedy_lighting",
+      "type": "remedy",
+      "label": "Lighting",
+      "properties": {
+        "confidence": 0.8,
+        "extracted": true
+      }
+    },
+    {
+      "id": "dosha_dense_wall",
+      "type": "vastu_dosha",
+      "label": "Dense Wall",
+      "properties": {
+        "confidence": 0.8,
+        "extracted": true
+      }
+    },
+    {
+      "id": "dosha_low_ceiling",
+      "type": "vastu_dosha",
+      "label": "Low Ceiling",
+      "properties": {
+        "confidence": 0.8,
+        "extracted": true
+      }
+    },
+    {
+      "id": "dosha_exposed_beam",
+      "type": "vastu_dosha",
+      "label": "Exposed Beam",
+      "properties": {
+        "confidence": 0.8,
+        "extracted": true
+      }
+    },
+    {
+      "id": "dosha_pillar_center",
+      "type": "vastu_dosha",
+      "label": "Pillar in Center",
+      "properties": {
+        "confidence": 0.8,
+        "extracted": true
+      }
+    },
+    {
+      "id": "dosha_staircase_center",
+      "type": "vastu_dosha",
+      "label": "Staircase in Center",
+      "properties": {
+        "confidence": 0.8,
+        "extracted": true
+      }
+    },
+    {
+      "id": "dosha_well_house",
+      "type": "vastu_dosha",
+      "label": "Well in House",
+      "properties": {
+        "confidence": 0.8,
+        "extracted": true
+      }
+    },
+    {
+      "id": "dosha_tank_house",
+      "type": "vastu_dosha",
+      "label": "Tank/Pool in House",
+      "properties": {
+        "confidence": 0.8,
+        "extracted": true
+      }
+    },
+    {
+      "id": "dosha_water_body_close",
+      "type": "vastu_dosha",
+      "label": "Water Body Too Close",
+      "properties": {
+        "confidence": 0.8,
+        "extracted": true
+      }
+    },
+    {
+      "id": "dosha_sloped_roof",
+      "type": "vastu_dosha",
+      "label": "Sloped Roof",
+      "properties": {
+        "confidence": 0.8,
+        "extracted": true
+      }
+    },
+    {
+      "id": "dosha_uneven_floor",
+      "type": "vastu_dosha",
+      "label": "Uneven Floor",
+      "properties": {
+        "confidence": 0.8,
+        "extracted": true
+      }
+    },
+    {
+      "id": "dosha_broken_mirror",
+      "type": "vastu_dosha",
+      "label": "Broken Mirror",
+      "properties": {
+        "confidence": 0.8,
+        "extracted": true
+      }
+    },
+    {
+      "id": "dosha_cluttered_space",
+      "type": "vastu_dosha",
+      "label": "Cluttered Space",
+      "properties": {
+        "confidence": 0.8,
+        "extracted": true
+      }
+    },
+    {
+      "id": "dosha_dark_entrance",
+      "type": "vastu_dosha",
+      "label": "Dark Entrance",
+      "properties": {
+        "confidence": 0.8,
+        "extracted": true
+      }
+    },
+    {
+      "id": "dosha_southwest_main",
+      "type": "vastu_dosha",
+      "label": "Southwest Main Door",
+      "properties": {
+        "confidence": 0.8,
+        "extracted": true
+      }
+    },
+    {
+      "id": "health_sleep_disorder",
+      "type": "health_impact",
+      "label": "Sleep Disorder",
+      "properties": {
+        "confidence": 0.75,
+        "extracted": true
+      }
+    },
+    {
+      "id": "health_insomnia_advanced",
+      "type": "health_impact",
+      "label": "Chronic Insomnia",
+      "properties": {
+        "confidence": 0.75,
+        "extracted": true
+      }
+    },
+    {
+      "id": "health_family_discord",
+      "type": "health_impact",
+      "label": "Family Discord",
+      "properties": {
+        "confidence": 0.75,
+        "extracted": true
+      }
+    },
+    {
+      "id": "health_relationship_conflict",
+      "type": "health_impact",
+      "label": "Relationship Conflict",
+      "properties": {
+        "confidence": 0.75,
+        "extracted": true
+      }
+    },
+    {
+      "id": "health_career_setback",
+      "type": "health_impact",
+      "label": "Career Setback",
+      "properties": {
+        "confidence": 0.75,
+        "extracted": true
+      }
+    },
+    {
+      "id": "health_business_loss",
+      "type": "health_impact",
+      "label": "Business Loss",
+      "properties": {
+        "confidence": 0.75,
+        "extracted": true
+      }
+    },
+    {
+      "id": "health_accident",
+      "type": "health_impact",
+      "label": "Accident/Injury",
+      "properties": {
+        "confidence": 0.75,
+        "extracted": true
+      }
+    },
+    {
+      "id": "health_illness",
+      "type": "health_impact",
+      "label": "Chronic Illness",
+      "properties": {
+        "confidence": 0.75,
+        "extracted": true
+      }
+    },
+    {
+      "id": "health_depression",
+      "type": "health_impact",
+      "label": "Depression",
+      "properties": {
+        "confidence": 0.75,
+        "extracted": true
+      }
+    },
+    {
+      "id": "health_lethargy",
+      "type": "health_impact",
+      "label": "Lethargy",
+      "properties": {
+        "confidence": 0.75,
+        "extracted": true
+      }
+    },
+    {
+      "id": "health_relationship_strain",
+      "type": "health_impact",
+      "label": "Relationship Strain",
+      "properties": {
+        "confidence": 0.75,
+        "extracted": true
+      }
+    },
+    {
+      "id": "health_unwanted_guests",
+      "type": "health_impact",
+      "label": "Unwanted Guests",
+      "properties": {
+        "confidence": 0.75,
+        "extracted": true
+      }
+    },
+    {
+      "id": "material_wood",
+      "type": "material",
+      "label": "Wood",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "material_stone",
+      "type": "material",
+      "label": "Stone",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "material_marble",
+      "type": "material",
+      "label": "Marble",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "material_granite",
+      "type": "material",
+      "label": "Granite",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "material_concrete",
+      "type": "material",
+      "label": "Concrete",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "material_metal",
+      "type": "material",
+      "label": "Metal",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "material_glass",
+      "type": "material",
+      "label": "Glass",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "material_brick",
+      "type": "material",
+      "label": "Brick",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "material_ceramic",
+      "type": "material",
+      "label": "Ceramic",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "material_copper",
+      "type": "material",
+      "label": "Copper",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "material_brass",
+      "type": "material",
+      "label": "Brass",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "material_iron",
+      "type": "material",
+      "label": "Iron",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "geom_square",
+      "type": "sacred_geometry",
+      "label": "Square",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "geom_circle",
+      "type": "sacred_geometry",
+      "label": "Circle",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "geom_triangle",
+      "type": "sacred_geometry",
+      "label": "Triangle",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "geom_octagon",
+      "type": "sacred_geometry",
+      "label": "Octagon",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "geom_hexagon",
+      "type": "sacred_geometry",
+      "label": "Hexagon",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "geom_pentagon",
+      "type": "sacred_geometry",
+      "label": "Pentagon",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "geom_mandala",
+      "type": "sacred_geometry",
+      "label": "Mandala",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "geom_lotus",
+      "type": "sacred_geometry",
+      "label": "Lotus",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "geom_swastika",
+      "type": "sacred_geometry",
+      "label": "Swastika",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "geom_yantra",
+      "type": "sacred_geometry",
+      "label": "Yantra",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "geom_proportion",
+      "type": "sacred_geometry",
+      "label": "Proportion",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "geom_golden_ratio",
+      "type": "sacred_geometry",
+      "label": "Golden Ratio",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "color_pink",
+      "type": "color",
+      "label": "Pink",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "color_purple",
+      "type": "color",
+      "label": "Purple",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "color_violet",
+      "type": "color",
+      "label": "Violet",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "color_grey",
+      "type": "color",
+      "label": "Grey",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "color_silver",
+      "type": "color",
+      "label": "Silver",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "color_gold",
+      "type": "color",
+      "label": "Gold",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "color_cream",
+      "type": "color",
+      "label": "Cream",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "color_ivory",
+      "type": "color",
+      "label": "Ivory",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "planet_sun",
+      "type": "planet",
+      "label": "Sun (Surya)",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "planet_moon",
+      "type": "planet",
+      "label": "Moon (Chandra)",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "planet_mercury",
+      "type": "planet",
+      "label": "Mercury (Budha)",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "planet_venus",
+      "type": "planet",
+      "label": "Venus (Shukra)",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "planet_mars",
+      "type": "planet",
+      "label": "Mars (Mangal)",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "planet_jupiter",
+      "type": "planet",
+      "label": "Jupiter (Brihaspati)",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "planet_saturn",
+      "type": "planet",
+      "label": "Saturn (Shani)",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "planet_rahu",
+      "type": "planet",
+      "label": "Rahu",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    },
+    {
+      "id": "planet_ketu",
+      "type": "planet",
+      "label": "Ketu",
+      "properties": {
+        "confidence": 0.85,
+        "extracted": true
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_001",
+      "source": "direction_north",
+      "target": "element_water",
+      "relation": "HAS_ELEMENT",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high"
+      }
+    },
+    {
+      "id": "edge_002",
+      "source": "direction_northeast",
+      "target": "element_fire",
+      "relation": "HAS_ELEMENT",
+      "properties": {
+        "confidence": 0.9,
+        "frequency": "medium"
+      }
+    },
+    {
+      "id": "edge_003",
+      "source": "direction_east",
+      "target": "element_air",
+      "relation": "HAS_ELEMENT",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high"
+      }
+    },
+    {
+      "id": "edge_004",
+      "source": "direction_southeast",
+      "target": "element_fire",
+      "relation": "HAS_ELEMENT",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high"
+      }
+    },
+    {
+      "id": "edge_005",
+      "source": "direction_south",
+      "target": "element_earth",
+      "relation": "HAS_ELEMENT",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high"
+      }
+    },
+    {
+      "id": "edge_006",
+      "source": "direction_southwest",
+      "target": "element_earth",
+      "relation": "HAS_ELEMENT",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high"
+      }
+    },
+    {
+      "id": "edge_007",
+      "source": "direction_west",
+      "target": "element_water",
+      "relation": "HAS_ELEMENT",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high"
+      }
+    },
+    {
+      "id": "edge_008",
+      "source": "direction_northwest",
+      "target": "element_air",
+      "relation": "HAS_ELEMENT",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high"
+      }
+    },
+    {
+      "id": "edge_009",
+      "source": "direction_center",
+      "target": "element_space",
+      "relation": "HAS_ELEMENT",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high"
+      }
+    },
+    {
+      "id": "edge_010",
+      "source": "direction_north",
+      "target": "color_blue",
+      "relation": "HAS_COLOR",
+      "properties": {
+        "confidence": 0.9,
+        "frequency": "high"
+      }
+    },
+    {
+      "id": "edge_011",
+      "source": "direction_northeast",
+      "target": "color_yellow",
+      "relation": "HAS_COLOR",
+      "properties": {
+        "confidence": 0.9,
+        "frequency": "high"
+      }
+    },
+    {
+      "id": "edge_012",
+      "source": "direction_southeast",
+      "target": "color_red",
+      "relation": "HAS_COLOR",
+      "properties": {
+        "confidence": 0.9,
+        "frequency": "high"
+      }
+    },
+    {
+      "id": "edge_013",
+      "source": "element_water",
+      "target": "color_blue",
+      "relation": "HAS_COLOR",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high"
+      }
+    },
+    {
+      "id": "edge_014",
+      "source": "element_fire",
+      "target": "color_red",
+      "relation": "HAS_COLOR",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high"
+      }
+    },
+    {
+      "id": "edge_015",
+      "source": "room_kitchen",
+      "target": "direction_southeast",
+      "relation": "OPTIMAL_FOR",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high"
+      }
+    },
+    {
+      "id": "edge_016",
+      "source": "room_puja",
+      "target": "direction_northeast",
+      "relation": "OPTIMAL_FOR",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high"
+      }
+    },
+    {
+      "id": "edge_017",
+      "source": "room_bedroom",
+      "target": "direction_south",
+      "relation": "OPTIMAL_FOR",
+      "properties": {
+        "confidence": 0.9,
+        "frequency": "high"
+      }
+    },
+    {
+      "id": "edge_018",
+      "source": "room_office",
+      "target": "direction_north",
+      "relation": "OPTIMAL_FOR",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high"
+      }
+    },
+    {
+      "id": "edge_019",
+      "source": "room_kitchen",
+      "target": "direction_northwest",
+      "relation": "AVOID_IN",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high"
+      }
+    },
+    {
+      "id": "edge_020",
+      "source": "room_puja",
+      "target": "direction_northwest",
+      "relation": "AVOID_IN",
+      "properties": {
+        "confidence": 0.9,
+        "frequency": "medium"
+      }
+    },
+    {
+      "id": "edge_021",
+      "source": "dosha_blocked_entry",
+      "target": "remedy_mirror",
+      "relation": "REQUIRES_REMEDY",
+      "properties": {
+        "confidence": 0.85,
+        "frequency": "high"
+      }
+    },
+    {
+      "id": "edge_022",
+      "source": "dosha_blocked_entry",
+      "target": "remedy_light_colors",
+      "relation": "REQUIRES_REMEDY",
+      "properties": {
+        "confidence": 0.8,
+        "frequency": "medium"
+      }
+    },
+    {
+      "id": "edge_023",
+      "source": "dosha_central_pit",
+      "target": "remedy_mirror",
+      "relation": "REQUIRES_REMEDY",
+      "properties": {
+        "confidence": 0.75,
+        "frequency": "medium"
+      }
+    },
+    {
+      "id": "edge_024",
+      "source": "dosha_northwest_toilet",
+      "target": "remedy_water_fountain",
+      "relation": "REQUIRES_REMEDY",
+      "properties": {
+        "confidence": 0.8,
+        "frequency": "medium"
+      }
+    },
+    {
+      "id": "edge_025",
+      "source": "dosha_northwest_toilet",
+      "target": "remedy_wind_chime",
+      "relation": "REQUIRES_REMEDY",
+      "properties": {
+        "confidence": 0.75,
+        "frequency": "low"
+      }
+    },
+    {
+      "id": "edge_026",
+      "source": "dosha_blocked_entry",
+      "target": "health_anxiety",
+      "relation": "AGGRAVATES_HEALTH",
+      "properties": {
+        "confidence": 0.9,
+        "frequency": "high"
+      }
+    },
+    {
+      "id": "edge_027",
+      "source": "dosha_blocked_entry",
+      "target": "health_financial_loss",
+      "relation": "AGGRAVATES_HEALTH",
+      "properties": {
+        "confidence": 0.85,
+        "frequency": "high"
+      }
+    },
+    {
+      "id": "edge_028",
+      "source": "dosha_central_pit",
+      "target": "health_financial_loss",
+      "relation": "AGGRAVATES_HEALTH",
+      "properties": {
+        "confidence": 0.9,
+        "frequency": "high"
+      }
+    },
+    {
+      "id": "edge_029",
+      "source": "dosha_northwest_toilet",
+      "target": "health_respiratory",
+      "relation": "AGGRAVATES_HEALTH",
+      "properties": {
+        "confidence": 0.85,
+        "frequency": "high"
+      }
+    },
+    {
+      "id": "edge_030",
+      "source": "remedy_mirror",
+      "target": "health_anxiety",
+      "relation": "SUPPORTS_HEALTH",
+      "properties": {
+        "confidence": 0.8,
+        "frequency": "medium"
+      }
+    },
+    {
+      "id": "edge_031",
+      "source": "remedy_water_fountain",
+      "target": "health_financial_loss",
+      "relation": "SUPPORTS_HEALTH",
+      "properties": {
+        "confidence": 0.75,
+        "frequency": "medium"
+      }
+    },
+    {
+      "id": "edge_032",
+      "source": "element_water",
+      "target": "dosha_correlation_kapha",
+      "relation": "CORRELATES_DOSHA",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high"
+      }
+    },
+    {
+      "id": "edge_033",
+      "source": "element_fire",
+      "target": "dosha_correlation_pitta",
+      "relation": "CORRELATES_DOSHA",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high"
+      }
+    },
+    {
+      "id": "edge_034",
+      "source": "element_air",
+      "target": "dosha_correlation_vata",
+      "relation": "CORRELATES_DOSHA",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high"
+      }
+    },
+    {
+      "id": "edge_035",
+      "source": "element_earth",
+      "target": "dosha_correlation_kapha",
+      "relation": "CORRELATES_DOSHA",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high"
+      }
+    },
+    {
+      "id": "edge_036",
+      "source": "direction_north",
+      "target": "chakra_root",
+      "relation": "ACTIVATES_CHAKRA",
+      "properties": {
+        "confidence": 0.85,
+        "frequency": "medium"
+      }
+    },
+    {
+      "id": "edge_037",
+      "source": "direction_northeast",
+      "target": "chakra_third_eye",
+      "relation": "ACTIVATES_CHAKRA",
+      "properties": {
+        "confidence": 0.85,
+        "frequency": "medium"
+      }
+    },
+    {
+      "id": "edge_038",
+      "source": "direction_east",
+      "target": "chakra_heart",
+      "relation": "ACTIVATES_CHAKRA",
+      "properties": {
+        "confidence": 0.85,
+        "frequency": "medium"
+      }
+    },
+    {
+      "id": "edge_039",
+      "source": "direction_southeast",
+      "target": "chakra_solar",
+      "relation": "ACTIVATES_CHAKRA",
+      "properties": {
+        "confidence": 0.85,
+        "frequency": "medium"
+      }
+    },
+    {
+      "id": "edge_040",
+      "source": "direction_center",
+      "target": "chakra_third_eye",
+      "relation": "ACTIVATES_CHAKRA",
+      "properties": {
+        "confidence": 0.8,
+        "frequency": "low"
+      }
+    },
+    {
+      "id": "edge_041",
+      "source": "dosha_blocked_entry",
+      "target": "text_mayamatam",
+      "relation": "FOUND_IN_TEXT",
+      "properties": {
+        "confidence": 0.9,
+        "reference": "ch2_v45"
+      }
+    },
+    {
+      "id": "edge_042",
+      "source": "dosha_central_pit",
+      "target": "text_mayamatam",
+      "relation": "FOUND_IN_TEXT",
+      "properties": {
+        "confidence": 0.95,
+        "reference": "ch1_v12"
+      }
+    },
+    {
+      "id": "edge_043",
+      "source": "dosha_northwest_toilet",
+      "target": "text_brihat_samhita",
+      "relation": "FOUND_IN_TEXT",
+      "properties": {
+        "confidence": 0.9,
+        "reference": "ch56_v78"
+      }
+    },
+    {
+      "id": "edge_044",
+      "source": "remedy_mirror",
+      "target": "text_aparajita",
+      "relation": "FOUND_IN_TEXT",
+      "properties": {
+        "confidence": 0.85,
+        "reference": "various"
+      }
+    },
+    {
+      "id": "edge_045",
+      "source": "element_water",
+      "target": "direction_north",
+      "relation": "COMPLEMENTS",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high"
+      }
+    },
+    {
+      "id": "edge_046",
+      "source": "element_fire",
+      "target": "element_earth",
+      "relation": "COMPLEMENTS",
+      "properties": {
+        "confidence": 0.9,
+        "frequency": "medium"
+      }
+    },
+    {
+      "id": "edge_047",
+      "source": "remedy_water_fountain",
+      "target": "remedy_wind_chime",
+      "relation": "SYNERGIZES_WITH",
+      "properties": {
+        "confidence": 0.8,
+        "frequency": "low"
+      }
+    },
+    {
+      "id": "edge_048",
+      "source": "remedy_light_colors",
+      "target": "remedy_mirror",
+      "relation": "ENHANCES",
+      "properties": {
+        "confidence": 0.75,
+        "frequency": "low"
+      }
+    },
+    {
+      "id": "edge_049",
+      "source": "color_blue",
+      "target": "dosha_correlation_kapha",
+      "relation": "COLOR_REMEDY",
+      "properties": {
+        "confidence": 0.85,
+        "frequency": "medium"
+      }
+    },
+    {
+      "id": "edge_050",
+      "source": "color_red",
+      "target": "dosha_correlation_pitta",
+      "relation": "COLOR_REMEDY",
+      "properties": {
+        "confidence": 0.85,
+        "frequency": "medium"
+      }
+    },
+    {
+      "id": "edge_051",
+      "source": "color_yellow",
+      "target": "dosha_correlation_vata",
+      "relation": "COLOR_REMEDY",
+      "properties": {
+        "confidence": 0.8,
+        "frequency": "low"
+      }
+    },
+    {
+      "id": "edge_0052",
+      "source": "direction_north",
+      "target": "element_water",
+      "relation": "HAS_ELEMENT",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high"
+      }
+    },
+    {
+      "id": "edge_0053",
+      "source": "direction_northeast",
+      "target": "element_fire",
+      "relation": "HAS_ELEMENT",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high"
+      }
+    },
+    {
+      "id": "edge_0054",
+      "source": "direction_east",
+      "target": "element_air",
+      "relation": "HAS_ELEMENT",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high"
+      }
+    },
+    {
+      "id": "edge_0055",
+      "source": "direction_southeast",
+      "target": "element_fire",
+      "relation": "HAS_ELEMENT",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high"
+      }
+    },
+    {
+      "id": "edge_0056",
+      "source": "direction_south",
+      "target": "element_earth",
+      "relation": "HAS_ELEMENT",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high"
+      }
+    },
+    {
+      "id": "edge_0057",
+      "source": "direction_southwest",
+      "target": "element_earth",
+      "relation": "HAS_ELEMENT",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high"
+      }
+    },
+    {
+      "id": "edge_0058",
+      "source": "direction_west",
+      "target": "element_water",
+      "relation": "HAS_ELEMENT",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high"
+      }
+    },
+    {
+      "id": "edge_0059",
+      "source": "direction_northwest",
+      "target": "element_air",
+      "relation": "HAS_ELEMENT",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high"
+      }
+    },
+    {
+      "id": "edge_0060",
+      "source": "room_kitchen",
+      "target": "direction_southeast",
+      "relation": "OPTIMAL_FOR",
+      "properties": {
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "edge_0061",
+      "source": "room_kitchen",
+      "target": "direction_northwest",
+      "relation": "AVOID_IN",
+      "properties": {
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "edge_0062",
+      "source": "room_bedroom",
+      "target": "direction_south",
+      "relation": "OPTIMAL_FOR",
+      "properties": {
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "edge_0063",
+      "source": "room_bedroom",
+      "target": "direction_north",
+      "relation": "AVOID_IN",
+      "properties": {
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "edge_0064",
+      "source": "room_living",
+      "target": "direction_east",
+      "relation": "OPTIMAL_FOR",
+      "properties": {
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "edge_0065",
+      "source": "room_living",
+      "target": "direction_west",
+      "relation": "AVOID_IN",
+      "properties": {
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "edge_0066",
+      "source": "room_guest_room",
+      "target": "direction_northwest",
+      "relation": "OPTIMAL_FOR",
+      "properties": {
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "edge_0067",
+      "source": "room_guest_room",
+      "target": "direction_southwest",
+      "relation": "AVOID_IN",
+      "properties": {
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "edge_0068",
+      "source": "room_servant_quarter",
+      "target": "direction_southeast",
+      "relation": "OPTIMAL_FOR",
+      "properties": {
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "edge_0069",
+      "source": "room_servant_quarter",
+      "target": "direction_northeast",
+      "relation": "AVOID_IN",
+      "properties": {
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "edge_0070",
+      "source": "room_store_room",
+      "target": "direction_southwest",
+      "relation": "OPTIMAL_FOR",
+      "properties": {
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "edge_0071",
+      "source": "room_store_room",
+      "target": "direction_northeast",
+      "relation": "AVOID_IN",
+      "properties": {
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "edge_0072",
+      "source": "room_staircase",
+      "target": "direction_south",
+      "relation": "OPTIMAL_FOR",
+      "properties": {
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "edge_0073",
+      "source": "room_garage",
+      "target": "direction_south",
+      "relation": "OPTIMAL_FOR",
+      "properties": {
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "edge_0074",
+      "source": "room_garage",
+      "target": "direction_northeast",
+      "relation": "AVOID_IN",
+      "properties": {
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "edge_0075",
+      "source": "dosha_blocked_entry",
+      "target": "health_financial_loss",
+      "relation": "AGGRAVATES_HEALTH",
+      "properties": {
+        "confidence": 0.85
+      }
+    },
+    {
+      "id": "edge_0076",
+      "source": "dosha_blocked_entry",
+      "target": "health_lethargy",
+      "relation": "AGGRAVATES_HEALTH",
+      "properties": {
+        "confidence": 0.85
+      }
+    },
+    {
+      "id": "edge_0077",
+      "source": "dosha_northwest_toilet",
+      "target": "health_financial_loss",
+      "relation": "AGGRAVATES_HEALTH",
+      "properties": {
+        "confidence": 0.85
+      }
+    },
+    {
+      "id": "edge_0078",
+      "source": "dosha_dense_wall",
+      "target": "health_depression",
+      "relation": "AGGRAVATES_HEALTH",
+      "properties": {
+        "confidence": 0.85
+      }
+    },
+    {
+      "id": "edge_0079",
+      "source": "dosha_dense_wall",
+      "target": "health_lethargy",
+      "relation": "AGGRAVATES_HEALTH",
+      "properties": {
+        "confidence": 0.85
+      }
+    },
+    {
+      "id": "edge_0080",
+      "source": "dosha_dark_entrance",
+      "target": "health_depression",
+      "relation": "AGGRAVATES_HEALTH",
+      "properties": {
+        "confidence": 0.85
+      }
+    },
+    {
+      "id": "edge_0081",
+      "source": "dosha_dark_entrance",
+      "target": "health_lethargy",
+      "relation": "AGGRAVATES_HEALTH",
+      "properties": {
+        "confidence": 0.85
+      }
+    },
+    {
+      "id": "edge_0082",
+      "source": "remedy_water_fountain",
+      "target": "health_financial_loss",
+      "relation": "SUPPORTS_HEALTH",
+      "properties": {
+        "confidence": 0.75
+      }
+    },
+    {
+      "id": "edge_0083",
+      "source": "element_water",
+      "target": "color_blue",
+      "relation": "HAS_COLOR",
+      "properties": {
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "edge_0084",
+      "source": "element_fire",
+      "target": "color_red",
+      "relation": "HAS_COLOR",
+      "properties": {
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "edge_0085",
+      "source": "element_fire",
+      "target": "color_pink",
+      "relation": "HAS_COLOR",
+      "properties": {
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "edge_0086",
+      "source": "element_earth",
+      "target": "color_yellow",
+      "relation": "HAS_COLOR",
+      "properties": {
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "edge_0087",
+      "source": "element_earth",
+      "target": "color_gold",
+      "relation": "HAS_COLOR",
+      "properties": {
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "edge_0088",
+      "source": "element_air",
+      "target": "color_grey",
+      "relation": "HAS_COLOR",
+      "properties": {
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "edge_0089",
+      "source": "room_bedroom",
+      "target": "material_wood",
+      "relation": "ASSOCIATED_WITH",
+      "properties": {
+        "confidence": 0.8
+      }
+    },
+    {
+      "id": "edge_0090",
+      "source": "room_kitchen",
+      "target": "material_stone",
+      "relation": "ASSOCIATED_WITH",
+      "properties": {
+        "confidence": 0.8
+      }
+    },
+    {
+      "id": "edge_0091",
+      "source": "room_living",
+      "target": "material_marble",
+      "relation": "ASSOCIATED_WITH",
+      "properties": {
+        "confidence": 0.8
+      }
+    },
+    {
+      "id": "edge_0092",
+      "source": "element_water",
+      "target": "direction_north",
+      "relation": "HAS_INVERSE_ELEMENT",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high",
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0093",
+      "source": "element_fire",
+      "target": "direction_northeast",
+      "relation": "HAS_INVERSE_ELEMENT",
+      "properties": {
+        "confidence": 0.9,
+        "frequency": "medium",
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0094",
+      "source": "element_air",
+      "target": "direction_east",
+      "relation": "HAS_INVERSE_ELEMENT",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high",
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0095",
+      "source": "element_fire",
+      "target": "direction_southeast",
+      "relation": "HAS_INVERSE_ELEMENT",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high",
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0096",
+      "source": "element_earth",
+      "target": "direction_south",
+      "relation": "HAS_INVERSE_ELEMENT",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high",
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0097",
+      "source": "element_earth",
+      "target": "direction_southwest",
+      "relation": "HAS_INVERSE_ELEMENT",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high",
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0098",
+      "source": "element_water",
+      "target": "direction_west",
+      "relation": "HAS_INVERSE_ELEMENT",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high",
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0099",
+      "source": "element_air",
+      "target": "direction_northwest",
+      "relation": "HAS_INVERSE_ELEMENT",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high",
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0100",
+      "source": "element_space",
+      "target": "direction_center",
+      "relation": "HAS_INVERSE_ELEMENT",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high",
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0101",
+      "source": "color_blue",
+      "target": "direction_north",
+      "relation": "HAS_INVERSE_COLOR",
+      "properties": {
+        "confidence": 0.9,
+        "frequency": "high",
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0102",
+      "source": "color_yellow",
+      "target": "direction_northeast",
+      "relation": "HAS_INVERSE_COLOR",
+      "properties": {
+        "confidence": 0.9,
+        "frequency": "high",
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0103",
+      "source": "color_red",
+      "target": "direction_southeast",
+      "relation": "HAS_INVERSE_COLOR",
+      "properties": {
+        "confidence": 0.9,
+        "frequency": "high",
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0104",
+      "source": "color_blue",
+      "target": "element_water",
+      "relation": "HAS_INVERSE_COLOR",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high",
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0105",
+      "source": "color_red",
+      "target": "element_fire",
+      "relation": "HAS_INVERSE_COLOR",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high",
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0106",
+      "source": "direction_southeast",
+      "target": "room_kitchen",
+      "relation": "OPTIMAL_FOR_REVERSE",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high",
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0107",
+      "source": "direction_northeast",
+      "target": "room_puja",
+      "relation": "OPTIMAL_FOR_REVERSE",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high",
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0108",
+      "source": "direction_south",
+      "target": "room_bedroom",
+      "relation": "OPTIMAL_FOR_REVERSE",
+      "properties": {
+        "confidence": 0.9,
+        "frequency": "high",
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0109",
+      "source": "direction_north",
+      "target": "room_office",
+      "relation": "OPTIMAL_FOR_REVERSE",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high",
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0110",
+      "source": "direction_northwest",
+      "target": "room_kitchen",
+      "relation": "AVOID_IN_REVERSE",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high",
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0111",
+      "source": "direction_northwest",
+      "target": "room_puja",
+      "relation": "AVOID_IN_REVERSE",
+      "properties": {
+        "confidence": 0.9,
+        "frequency": "medium",
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0112",
+      "source": "remedy_mirror",
+      "target": "dosha_blocked_entry",
+      "relation": "IS_REMEDY_FOR",
+      "properties": {
+        "confidence": 0.85,
+        "frequency": "high",
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0113",
+      "source": "remedy_light_colors",
+      "target": "dosha_blocked_entry",
+      "relation": "IS_REMEDY_FOR",
+      "properties": {
+        "confidence": 0.8,
+        "frequency": "medium",
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0114",
+      "source": "remedy_mirror",
+      "target": "dosha_central_pit",
+      "relation": "IS_REMEDY_FOR",
+      "properties": {
+        "confidence": 0.75,
+        "frequency": "medium",
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0115",
+      "source": "remedy_water_fountain",
+      "target": "dosha_northwest_toilet",
+      "relation": "IS_REMEDY_FOR",
+      "properties": {
+        "confidence": 0.8,
+        "frequency": "medium",
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0116",
+      "source": "remedy_wind_chime",
+      "target": "dosha_northwest_toilet",
+      "relation": "IS_REMEDY_FOR",
+      "properties": {
+        "confidence": 0.75,
+        "frequency": "low",
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0117",
+      "source": "chakra_root",
+      "target": "direction_north",
+      "relation": "ACTIVATED_BY",
+      "properties": {
+        "confidence": 0.85,
+        "frequency": "medium",
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0118",
+      "source": "chakra_third_eye",
+      "target": "direction_northeast",
+      "relation": "ACTIVATED_BY",
+      "properties": {
+        "confidence": 0.85,
+        "frequency": "medium",
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0119",
+      "source": "chakra_heart",
+      "target": "direction_east",
+      "relation": "ACTIVATED_BY",
+      "properties": {
+        "confidence": 0.85,
+        "frequency": "medium",
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0120",
+      "source": "chakra_solar",
+      "target": "direction_southeast",
+      "relation": "ACTIVATED_BY",
+      "properties": {
+        "confidence": 0.85,
+        "frequency": "medium",
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0121",
+      "source": "chakra_third_eye",
+      "target": "direction_center",
+      "relation": "ACTIVATED_BY",
+      "properties": {
+        "confidence": 0.8,
+        "frequency": "low",
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0122",
+      "source": "element_water",
+      "target": "direction_north",
+      "relation": "HAS_INVERSE_ELEMENT",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high",
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0123",
+      "source": "element_fire",
+      "target": "direction_northeast",
+      "relation": "HAS_INVERSE_ELEMENT",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high",
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0124",
+      "source": "element_air",
+      "target": "direction_east",
+      "relation": "HAS_INVERSE_ELEMENT",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high",
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0125",
+      "source": "element_fire",
+      "target": "direction_southeast",
+      "relation": "HAS_INVERSE_ELEMENT",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high",
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0126",
+      "source": "element_earth",
+      "target": "direction_south",
+      "relation": "HAS_INVERSE_ELEMENT",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high",
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0127",
+      "source": "element_earth",
+      "target": "direction_southwest",
+      "relation": "HAS_INVERSE_ELEMENT",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high",
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0128",
+      "source": "element_water",
+      "target": "direction_west",
+      "relation": "HAS_INVERSE_ELEMENT",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high",
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0129",
+      "source": "element_air",
+      "target": "direction_northwest",
+      "relation": "HAS_INVERSE_ELEMENT",
+      "properties": {
+        "confidence": 0.95,
+        "frequency": "high",
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0130",
+      "source": "direction_southeast",
+      "target": "room_kitchen",
+      "relation": "OPTIMAL_FOR_REVERSE",
+      "properties": {
+        "confidence": 0.9,
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0131",
+      "source": "direction_northwest",
+      "target": "room_kitchen",
+      "relation": "AVOID_IN_REVERSE",
+      "properties": {
+        "confidence": 0.9,
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0132",
+      "source": "direction_south",
+      "target": "room_bedroom",
+      "relation": "OPTIMAL_FOR_REVERSE",
+      "properties": {
+        "confidence": 0.9,
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0133",
+      "source": "direction_north",
+      "target": "room_bedroom",
+      "relation": "AVOID_IN_REVERSE",
+      "properties": {
+        "confidence": 0.9,
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0134",
+      "source": "direction_east",
+      "target": "room_living",
+      "relation": "OPTIMAL_FOR_REVERSE",
+      "properties": {
+        "confidence": 0.9,
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0135",
+      "source": "direction_west",
+      "target": "room_living",
+      "relation": "AVOID_IN_REVERSE",
+      "properties": {
+        "confidence": 0.9,
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0136",
+      "source": "direction_northwest",
+      "target": "room_guest_room",
+      "relation": "OPTIMAL_FOR_REVERSE",
+      "properties": {
+        "confidence": 0.9,
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0137",
+      "source": "direction_southwest",
+      "target": "room_guest_room",
+      "relation": "AVOID_IN_REVERSE",
+      "properties": {
+        "confidence": 0.9,
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0138",
+      "source": "direction_southeast",
+      "target": "room_servant_quarter",
+      "relation": "OPTIMAL_FOR_REVERSE",
+      "properties": {
+        "confidence": 0.9,
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0139",
+      "source": "direction_northeast",
+      "target": "room_servant_quarter",
+      "relation": "AVOID_IN_REVERSE",
+      "properties": {
+        "confidence": 0.9,
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0140",
+      "source": "direction_southwest",
+      "target": "room_store_room",
+      "relation": "OPTIMAL_FOR_REVERSE",
+      "properties": {
+        "confidence": 0.9,
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0141",
+      "source": "direction_northeast",
+      "target": "room_store_room",
+      "relation": "AVOID_IN_REVERSE",
+      "properties": {
+        "confidence": 0.9,
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0142",
+      "source": "direction_south",
+      "target": "room_staircase",
+      "relation": "OPTIMAL_FOR_REVERSE",
+      "properties": {
+        "confidence": 0.9,
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0143",
+      "source": "direction_south",
+      "target": "room_garage",
+      "relation": "OPTIMAL_FOR_REVERSE",
+      "properties": {
+        "confidence": 0.9,
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0144",
+      "source": "direction_northeast",
+      "target": "room_garage",
+      "relation": "AVOID_IN_REVERSE",
+      "properties": {
+        "confidence": 0.9,
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0145",
+      "source": "color_blue",
+      "target": "element_water",
+      "relation": "HAS_INVERSE_COLOR",
+      "properties": {
+        "confidence": 0.9,
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0146",
+      "source": "color_red",
+      "target": "element_fire",
+      "relation": "HAS_INVERSE_COLOR",
+      "properties": {
+        "confidence": 0.9,
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0147",
+      "source": "color_pink",
+      "target": "element_fire",
+      "relation": "HAS_INVERSE_COLOR",
+      "properties": {
+        "confidence": 0.9,
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0148",
+      "source": "color_yellow",
+      "target": "element_earth",
+      "relation": "HAS_INVERSE_COLOR",
+      "properties": {
+        "confidence": 0.9,
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0149",
+      "source": "color_gold",
+      "target": "element_earth",
+      "relation": "HAS_INVERSE_COLOR",
+      "properties": {
+        "confidence": 0.9,
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0150",
+      "source": "color_grey",
+      "target": "element_air",
+      "relation": "HAS_INVERSE_COLOR",
+      "properties": {
+        "confidence": 0.9,
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0151",
+      "source": "material_wood",
+      "target": "room_bedroom",
+      "relation": "ASSOCIATED_WITH_REVERSE",
+      "properties": {
+        "confidence": 0.8,
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0152",
+      "source": "material_stone",
+      "target": "room_kitchen",
+      "relation": "ASSOCIATED_WITH_REVERSE",
+      "properties": {
+        "confidence": 0.8,
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0153",
+      "source": "material_marble",
+      "target": "room_living",
+      "relation": "ASSOCIATED_WITH_REVERSE",
+      "properties": {
+        "confidence": 0.8,
+        "reverse": true
+      }
+    },
+    {
+      "id": "edge_0154",
+      "source": "dosha_uneven_floor",
+      "target": "dosha_blocked_entry",
+      "relation": "ASSOCIATED_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0155",
+      "source": "material_brick",
+      "target": "material_wood",
+      "relation": "USED_FOR",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0156",
+      "source": "chakra_sacral",
+      "target": "chakra_root",
+      "relation": "ASSOCIATED_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0157",
+      "source": "health_illness",
+      "target": "health_anxiety",
+      "relation": "RELATED_TO",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0158",
+      "source": "dosha_broken_mirror",
+      "target": "dosha_blocked_entry",
+      "relation": "ASSOCIATED_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0159",
+      "source": "material_copper",
+      "target": "material_wood",
+      "relation": "USED_FOR",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0160",
+      "source": "material_iron",
+      "target": "material_wood",
+      "relation": "USED_FOR",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0161",
+      "source": "health_business_loss",
+      "target": "health_anxiety",
+      "relation": "RELATED_TO",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0162",
+      "source": "remedy_art",
+      "target": "remedy_mirror",
+      "relation": "SYNERGIZES_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0163",
+      "source": "dosha_water_body_close",
+      "target": "dosha_blocked_entry",
+      "relation": "ASSOCIATED_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0164",
+      "source": "room_pathway",
+      "target": "room_bedroom",
+      "relation": "ASSOCIATED_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0165",
+      "source": "remedy_mandala",
+      "target": "remedy_mirror",
+      "relation": "SYNERGIZES_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0166",
+      "source": "remedy_salt",
+      "target": "remedy_mirror",
+      "relation": "SYNERGIZES_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0167",
+      "source": "remedy_incense",
+      "target": "remedy_mirror",
+      "relation": "SYNERGIZES_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0168",
+      "source": "health_family_discord",
+      "target": "health_anxiety",
+      "relation": "RELATED_TO",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0169",
+      "source": "dosha_staircase_center",
+      "target": "dosha_blocked_entry",
+      "relation": "ASSOCIATED_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0170",
+      "source": "material_ceramic",
+      "target": "material_wood",
+      "relation": "USED_FOR",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0171",
+      "source": "room_fountain",
+      "target": "room_bedroom",
+      "relation": "ASSOCIATED_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0172",
+      "source": "remedy_tree",
+      "target": "remedy_mirror",
+      "relation": "SYNERGIZES_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0173",
+      "source": "dosha_cluttered_space",
+      "target": "dosha_blocked_entry",
+      "relation": "ASSOCIATED_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0174",
+      "source": "health_relationship_conflict",
+      "target": "health_anxiety",
+      "relation": "RELATED_TO",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0175",
+      "source": "room_entrance_foyer",
+      "target": "room_bedroom",
+      "relation": "ASSOCIATED_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0176",
+      "source": "dosha_exposed_beam",
+      "target": "dosha_blocked_entry",
+      "relation": "ASSOCIATED_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0177",
+      "source": "material_granite",
+      "target": "material_wood",
+      "relation": "USED_FOR",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0178",
+      "source": "material_brass",
+      "target": "material_wood",
+      "relation": "USED_FOR",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0179",
+      "source": "dosha_southwest_main",
+      "target": "dosha_blocked_entry",
+      "relation": "ASSOCIATED_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0180",
+      "source": "health_sleep_disorder",
+      "target": "health_anxiety",
+      "relation": "RELATED_TO",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0181",
+      "source": "remedy_statue",
+      "target": "remedy_mirror",
+      "relation": "SYNERGIZES_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0182",
+      "source": "remedy_pyramid",
+      "target": "remedy_mirror",
+      "relation": "SYNERGIZES_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0183",
+      "source": "dosha_low_ceiling",
+      "target": "dosha_blocked_entry",
+      "relation": "ASSOCIATED_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0184",
+      "source": "dosha_pillar_center",
+      "target": "dosha_blocked_entry",
+      "relation": "ASSOCIATED_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0185",
+      "source": "health_insomnia",
+      "target": "health_anxiety",
+      "relation": "RELATED_TO",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0186",
+      "source": "remedy_yantra",
+      "target": "remedy_mirror",
+      "relation": "SYNERGIZES_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0187",
+      "source": "color_ivory",
+      "target": "color_blue",
+      "relation": "ASSOCIATED_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0188",
+      "source": "remedy_crystal",
+      "target": "remedy_mirror",
+      "relation": "SYNERGIZES_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0189",
+      "source": "room_basement",
+      "target": "room_bedroom",
+      "relation": "ASSOCIATED_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0190",
+      "source": "remedy_fountain_water",
+      "target": "remedy_mirror",
+      "relation": "SYNERGIZES_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0191",
+      "source": "color_violet",
+      "target": "color_blue",
+      "relation": "ASSOCIATED_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0192",
+      "source": "remedy_flower",
+      "target": "remedy_mirror",
+      "relation": "SYNERGIZES_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0193",
+      "source": "material_concrete",
+      "target": "material_wood",
+      "relation": "USED_FOR",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0194",
+      "source": "health_career_setback",
+      "target": "health_anxiety",
+      "relation": "RELATED_TO",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0195",
+      "source": "color_cream",
+      "target": "color_blue",
+      "relation": "ASSOCIATED_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0196",
+      "source": "dosha_well_house",
+      "target": "dosha_blocked_entry",
+      "relation": "ASSOCIATED_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0197",
+      "source": "health_unwanted_guests",
+      "target": "health_anxiety",
+      "relation": "RELATED_TO",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0198",
+      "source": "room_attic",
+      "target": "room_bedroom",
+      "relation": "ASSOCIATED_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0199",
+      "source": "health_insomnia_advanced",
+      "target": "health_anxiety",
+      "relation": "RELATED_TO",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0200",
+      "source": "remedy_bell",
+      "target": "remedy_mirror",
+      "relation": "SYNERGIZES_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0201",
+      "source": "health_relationship_strain",
+      "target": "health_anxiety",
+      "relation": "RELATED_TO",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0202",
+      "source": "color_silver",
+      "target": "color_blue",
+      "relation": "ASSOCIATED_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0203",
+      "source": "remedy_plant",
+      "target": "remedy_mirror",
+      "relation": "SYNERGIZES_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0204",
+      "source": "dosha_sloped_roof",
+      "target": "dosha_blocked_entry",
+      "relation": "ASSOCIATED_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0205",
+      "source": "color_purple",
+      "target": "color_blue",
+      "relation": "ASSOCIATED_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0206",
+      "source": "material_metal",
+      "target": "material_wood",
+      "relation": "USED_FOR",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0207",
+      "source": "remedy_gemstone",
+      "target": "remedy_mirror",
+      "relation": "SYNERGIZES_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0208",
+      "source": "dosha_tank_house",
+      "target": "dosha_blocked_entry",
+      "relation": "ASSOCIATED_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0209",
+      "source": "remedy_vastu_correction",
+      "target": "remedy_mirror",
+      "relation": "SYNERGIZES_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0210",
+      "source": "remedy_ring",
+      "target": "remedy_mirror",
+      "relation": "SYNERGIZES_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0211",
+      "source": "remedy_lighting",
+      "target": "remedy_mirror",
+      "relation": "SYNERGIZES_WITH",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0212",
+      "source": "material_glass",
+      "target": "material_wood",
+      "relation": "USED_FOR",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    },
+    {
+      "id": "edge_0213",
+      "source": "health_accident",
+      "target": "health_anxiety",
+      "relation": "RELATED_TO",
+      "properties": {
+        "confidence": 0.7,
+        "auto_connected": true
+      }
+    }
+  ]
+}
