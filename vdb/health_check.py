@@ -1,11 +1,21 @@
-"""Vector database health check functionality."""
+"""Vector database health check functionality with fast timeout and retry logic."""
 
 import asyncio
 import logging
-from typing import Dict, List, Optional, Any
+from typing import Dict, List, Optional, Any, Callable
 from datetime import datetime, timedelta
+from enum import Enum
 
 logger = logging.getLogger(__name__)
+
+
+class HealthStatus(Enum):
+    """Health check status indicators."""
+
+    HEALTHY = "healthy"
+    DEGRADED = "degraded"
+    UNHEALTHY = "unhealthy"
+    UNKNOWN = "unknown"
 
 
 class HealthChecker:
@@ -159,3 +169,159 @@ class HealthChecker:
             except Exception as e:
                 logger.error(f"Continuous monitoring error: {e}")
                 await asyncio.sleep(self.check_interval)
+
+
+class FastHealthChecker:
+    """
+    Fast health checker with quick timeout and retry logic.
+    Optimized for critical VDB availability checks.
+    """
+
+    def __init__(self, timeout_seconds: float = 2.0, max_retries: int = 3):
+        """
+        Initialize fast health checker.
+
+        Args:
+            timeout_seconds: Timeout for each health check (default 2s)
+            max_retries: Maximum retries on failure (default 3)
+        """
+        self.timeout_seconds = timeout_seconds
+        self.max_retries = max_retries
+        self.last_check_time = None
+        self.check_cache = {}  # vdb_name -> (status, timestamp)
+
+    async def check_vdb_health(
+        self, vdb_name: str, check_fn: Callable, use_cache: bool = True
+    ) -> Dict[str, Any]:
+        """
+        Check VDB health with fast timeout and retry logic.
+
+        Args:
+            vdb_name: Name of VDB service
+            check_fn: Async function that performs health check
+            use_cache: Use cached result if available (default True)
+
+        Returns:
+            Health check result
+        """
+        # Try cache first
+        if use_cache and vdb_name in self.check_cache:
+            cached_status, cached_time = self.check_cache[vdb_name]
+            # Cache valid for 60 seconds
+            if (datetime.now() - cached_time).total_seconds() < 60:
+                logger.debug(f"Using cached health status for {vdb_name}")
+                return cached_status
+
+        # Try health check with retries
+        for attempt in range(self.max_retries):
+            try:
+                logger.debug(f"Health check for {vdb_name} (attempt {attempt + 1}/{self.max_retries})")
+
+                # Execute health check with timeout
+                result = await asyncio.wait_for(check_fn(), timeout=self.timeout_seconds)
+
+                # Cache successful result
+                status = {
+                    "vdb_name": vdb_name,
+                    "status": HealthStatus.HEALTHY.value,
+                    "timestamp": datetime.now().isoformat(),
+                    "attempts": attempt + 1,
+                    "success": True,
+                }
+
+                self.check_cache[vdb_name] = (status, datetime.now())
+                return status
+
+            except asyncio.TimeoutError:
+                logger.warning(f"{vdb_name} health check timeout (attempt {attempt + 1}/{self.max_retries})")
+                # Exponential backoff before retry
+                if attempt < self.max_retries - 1:
+                    await asyncio.sleep(0.1 * (2 ** attempt))
+
+            except Exception as e:
+                logger.warning(
+                    f"{vdb_name} health check failed: {e} (attempt {attempt + 1}/{self.max_retries})"
+                )
+                # Exponential backoff before retry
+                if attempt < self.max_retries - 1:
+                    await asyncio.sleep(0.1 * (2 ** attempt))
+
+        # All retries exhausted
+        status = {
+            "vdb_name": vdb_name,
+            "status": HealthStatus.UNHEALTHY.value,
+            "timestamp": datetime.now().isoformat(),
+            "attempts": self.max_retries,
+            "success": False,
+        }
+
+        self.check_cache[vdb_name] = (status, datetime.now())
+        return status
+
+    async def check_multiple_vdbs(
+        self,
+        checks: Dict[str, Callable],
+        timeout_per_check: Optional[float] = None,
+    ) -> Dict[str, Dict[str, Any]]:
+        """
+        Check multiple VDBs concurrently with fast timeout.
+
+        Args:
+            checks: Dict of {vdb_name: check_fn}
+            timeout_per_check: Override timeout for this check
+
+        Returns:
+            Dict of health check results
+        """
+        timeout = timeout_per_check or self.timeout_seconds
+
+        # Run all checks concurrently
+        tasks = {
+            vdb_name: self.check_vdb_health(vdb_name, check_fn)
+            for vdb_name, check_fn in checks.items()
+        }
+
+        try:
+            results = await asyncio.wait_for(
+                asyncio.gather(*tasks.values(), return_exceptions=True),
+                timeout=timeout + 1,  # Allow slightly more than individual timeout
+            )
+
+            return {vdb_name: result for vdb_name, result in zip(tasks.keys(), results)}
+
+        except asyncio.TimeoutError:
+            logger.error("Multiple VDB health check timeout")
+            return {
+                vdb_name: {
+                    "vdb_name": vdb_name,
+                    "status": HealthStatus.UNKNOWN.value,
+                    "timestamp": datetime.now().isoformat(),
+                    "error": "Health check timeout",
+                }
+                for vdb_name in checks.keys()
+            }
+
+    def get_overall_status(self, health_results: Dict[str, Dict[str, Any]]) -> str:
+        """Determine overall system health status."""
+        statuses = [r.get("status", HealthStatus.UNKNOWN.value) for r in health_results.values()]
+
+        if all(s == HealthStatus.HEALTHY.value for s in statuses):
+            return HealthStatus.HEALTHY.value
+        elif any(s == HealthStatus.HEALTHY.value for s in statuses):
+            return HealthStatus.DEGRADED.value
+        else:
+            return HealthStatus.UNHEALTHY.value
+
+    def clear_cache(self, vdb_name: Optional[str] = None) -> None:
+        """
+        Clear health check cache.
+
+        Args:
+            vdb_name: Clear specific VDB cache, or None for all
+        """
+        if vdb_name:
+            self.check_cache.pop(vdb_name, None)
+            logger.debug(f"Cleared cache for {vdb_name}")
+        else:
+            self.check_cache.clear()
+            logger.debug("Cleared all health check cache")

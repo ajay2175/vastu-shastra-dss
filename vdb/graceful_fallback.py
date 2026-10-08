@@ -1,7 +1,9 @@
 """Graceful fallback mechanism for database failures."""
 
+import asyncio
 import logging
 from typing import List, Dict, Optional, Any, Callable
+from datetime import datetime
 from enum import Enum
 
 logger = logging.getLogger(__name__)
@@ -200,3 +202,183 @@ class GracefulFallback:
         logger.info("Resetting fallback state")
         self.fallback_active = False
         self.fallback_reason = None
+
+
+class ConsultationFallbackManager:
+    """
+    Manages fallback for Vastu consultations.
+    Ensures core consultation always works, VDB enhancements are optional.
+    """
+
+    def __init__(self):
+        """Initialize consultation fallback manager."""
+        self.core_consultation_cache = {}
+        self.vdb_enhancement_cache = {}
+        self.fallback_active = False
+        self.fallback_metrics = {
+            "core_only_served": 0,
+            "core_with_jyotish": 0,
+            "core_with_ayurveda": 0,
+            "core_with_both_vdbs": 0,
+            "fallback_triggered": 0,
+        }
+
+    async def get_consultation_with_vdb_enhancements(
+        self,
+        consultation_id: str,
+        core_consultation_fn: Callable,
+        jyotish_fn: Optional[Callable] = None,
+        ayurveda_fn: Optional[Callable] = None,
+        timeout_seconds: float = 5.0,
+    ) -> Dict[str, Any]:
+        """
+        Get consultation with optional VDB enhancements.
+        Core always succeeds; VDBs enhance if available.
+
+        Pattern:
+        1. Get core consultation (ALWAYS WORKS)
+        2. Try Jyotish enhancement (optional, fast-fail)
+        3. Try Ayurveda enhancement (optional, fast-fail)
+        4. Merge enhancements with core
+        5. Return complete result (always has core at minimum)
+
+        Args:
+            consultation_id: Unique consultation ID
+            core_consultation_fn: Async function for core consultation
+            jyotish_fn: Optional async function for Jyotish enhancement
+            ayurveda_fn: Optional async function for Ayurveda enhancement
+            timeout_seconds: Timeout for enhancement queries
+
+        Returns:
+            Complete consultation with optional enhancements
+        """
+        result = {
+            "consultation_id": consultation_id,
+            "timestamp": datetime.now().isoformat(),
+            "core_result": None,
+            "enhancements": {
+                "jyotish": None,
+                "ayurveda": None,
+            },
+            "vdbs_used": [],
+            "enhancement_level": "unknown",
+            "errors": [],
+        }
+
+        # STEP 1: Get core consultation (ALWAYS WORKS - never fails the user)
+        try:
+            logger.info(f"Getting core consultation for {consultation_id}")
+            core_result = await asyncio.wait_for(core_consultation_fn(), timeout=10.0)
+            result["core_result"] = core_result
+            self.core_consultation_cache[consultation_id] = core_result
+
+        except Exception as e:
+            logger.error(f"Core consultation failed: {e}")
+            result["errors"].append(f"Core consultation error: {e}")
+            # Return early - core consultation must work
+            result["enhancement_level"] = "error"
+            return result
+
+        # STEP 2: Try Jyotish enhancement (optional, fast-fail)
+        if jyotish_fn:
+            try:
+                logger.debug("Attempting Jyotish enhancement")
+                jyotish_result = await asyncio.wait_for(jyotish_fn(), timeout=timeout_seconds)
+                result["enhancements"]["jyotish"] = jyotish_result
+                result["vdbs_used"].append("jyotish")
+                logger.debug("Jyotish enhancement successful")
+
+            except asyncio.TimeoutError:
+                logger.warning(f"Jyotish enhancement timeout ({timeout_seconds}s)")
+                result["errors"].append("Jyotish enhancement timeout")
+
+            except Exception as e:
+                logger.warning(f"Jyotish enhancement failed: {e}")
+                result["errors"].append(f"Jyotish error: {e}")
+
+        # STEP 3: Try Ayurveda enhancement (optional, fast-fail)
+        if ayurveda_fn:
+            try:
+                logger.debug("Attempting Ayurveda enhancement")
+                ayurveda_result = await asyncio.wait_for(ayurveda_fn(), timeout=timeout_seconds)
+                result["enhancements"]["ayurveda"] = ayurveda_result
+                result["vdbs_used"].append("ayurveda")
+                logger.debug("Ayurveda enhancement successful")
+
+            except asyncio.TimeoutError:
+                logger.warning(f"Ayurveda enhancement timeout ({timeout_seconds}s)")
+                result["errors"].append("Ayurveda enhancement timeout")
+
+            except Exception as e:
+                logger.warning(f"Ayurveda enhancement failed: {e}")
+                result["errors"].append(f"Ayurveda error: {e}")
+
+        # STEP 4: Determine enhancement level
+        vdbs_count = len(result["vdbs_used"])
+        if vdbs_count == 0:
+            result["enhancement_level"] = "core_only"
+            self.fallback_metrics["core_only_served"] += 1
+
+        elif vdbs_count == 1:
+            if "jyotish" in result["vdbs_used"]:
+                result["enhancement_level"] = "core_with_jyotish"
+                self.fallback_metrics["core_with_jyotish"] += 1
+            else:
+                result["enhancement_level"] = "core_with_ayurveda"
+                self.fallback_metrics["core_with_ayurveda"] += 1
+
+        else:
+            result["enhancement_level"] = "core_with_both_vdbs"
+            self.fallback_metrics["core_with_both_vdbs"] += 1
+
+        logger.info(
+            f"Consultation {consultation_id} complete: "
+            f"enhancement_level={result['enhancement_level']}, "
+            f"errors={len(result['errors'])}"
+        )
+
+        return result
+
+    async def merge_enhancements(
+        self, core_result: Dict, enhancements: Dict[str, Any]
+    ) -> Dict[str, Any]:
+        """
+        Merge VDB enhancements with core consultation.
+
+        Args:
+            core_result: Core consultation result
+            enhancements: Dict with 'jyotish' and 'ayurveda' enhancements
+
+        Returns:
+            Merged result
+        """
+        merged = {**core_result}
+
+        # Add Jyotish insights if available
+        if enhancements.get("jyotish"):
+            merged["jyotish_insights"] = enhancements["jyotish"]
+
+        # Add Ayurveda insights if available
+        if enhancements.get("ayurveda"):
+            merged["ayurveda_insights"] = enhancements["ayurveda"]
+
+        return merged
+
+    def get_fallback_metrics(self) -> Dict[str, Any]:
+        """Get fallback and enhancement metrics."""
+        total_consultations = sum(self.fallback_metrics.values())
+
+        return {
+            **self.fallback_metrics,
+            "total_consultations": total_consultations,
+            "core_only_percentage": (
+                (self.fallback_metrics["core_only_served"] / total_consultations * 100)
+                if total_consultations > 0
+                else 0
+            ),
+            "fully_enhanced_percentage": (
+                (self.fallback_metrics["core_with_both_vdbs"] / total_consultations * 100)
+                if total_consultations > 0
+                else 0
+            ),
+        }
