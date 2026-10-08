@@ -1,0 +1,28 @@
+{
+  "vectorizer": {
+    "model": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
+    "embedding_dimension": 768,
+    "device": "cpu",
+    "batch_size": 1000
+  },
+  "statistics": {
+    "total_chunks": 192,
+    "chunks_embedded": 192,
+    "chunks_failed": 0,
+    "total_characters": 173285,
+    "total_tokens": 43264,
+    "total_embedding_time": 5.347954988479614,
+    "avg_embedding_time_per_chunk": 0.027853932231664658,
+    "embedding_dimensions": 768,
+    "database_size_mb": 2.8067970275878906,
+    "success_rate": 100.0,
+    "batch_count": 1,
+    "avg_batch_size": 192,
+    "timestamp": "2026-10-08T16:48:55.565058"
+  },
+  "database": {
+    "path": "/Users/ajaynawale/vastu_shastra_dss/vdb/chroma_vastu_db",
+    "collection_name": "vastu_texts",
+    "backend": "chroma"
+  }
+}
