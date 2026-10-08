@@ -1,0 +1,56 @@
+# HuggingFace Spaces Configuration for Vastu Shastra DSS
+# This file configures how the Space runs on HuggingFace infrastructure
+
+# Space metadata
+title: "Vastu Shastra DSS"
+description: "Vastu Shastra Decision Support System - Architectural & Spatial Harmony Analysis"
+tags:
+  - vastu
+  - architecture
+  - spatial-analysis
+  - dss
+  - ayurveda
+
+# Runtime configuration
+runtime: docker
+dockerfile: Dockerfile
+
+# Port configuration
+port: 8000
+
+# Environment variables (secret ones must be added via HF Spaces UI)
+env:
+  - name: ENVIRONMENT
+    value: "production"
+  - name: DEBUG
+    value: "false"
+  - name: LOG_LEVEL
+    value: "INFO"
+  - name: API_HOST
+    value: "0.0.0.0"
+  - name: API_PORT
+    value: "8000"
+  - name: ENABLE_RAG
+    value: "true"
+  - name: ENABLE_KG_REASONING
+    value: "true"
+  - name: ENABLE_HYBRID_SEARCH
+    value: "true"
+
+# Secrets that must be added via HF UI
+secrets:
+  - name: ANTHROPIC_API_KEY
+    description: "Anthropic API Key for Claude access"
+
+# Startup configuration
+startup_duration_seconds: 90
+
+# Resource allocation
+hardware:
+  cpu: 4
+  memory: 8GB
+
+# Repository settings
+git:
+  branch: main
+  auto_deploy: true
