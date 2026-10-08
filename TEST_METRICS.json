@@ -1,0 +1,10 @@
+{
+  "query_success_rate": "100.0%",
+  "average_response_latency_ms": "0.01",
+  "average_quality_score": "6.7/10",
+  "citation_presence_percent": "54.2%",
+  "recommendation_quality_score": "8.9/10",
+  "test_pass_rate": "100.0%",
+  "total_queries": 24,
+  "total_tests": 38
+}
