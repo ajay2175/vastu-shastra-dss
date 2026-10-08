@@ -87,3 +87,4 @@ chroma_data/
 
 # PDF cache
 *.pdfcache
+vastu_knowledge_graph_ultra*.json
