@@ -1,0 +1,424 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "created": "2026-10-08",
+    "description": "Entity extraction patterns for Vastu Shastra texts",
+    "total_patterns": 16,
+    "usage": "For PDF extraction pipelines - use regex matching with context awareness"
+  },
+  "directions": {
+    "entity_type": "direction",
+    "count": 9,
+    "patterns": [
+      "(?:north|उत्तर)",
+      "(?:northeast|north-east|ईशान|ishaan)",
+      "(?:east|पूर्व)",
+      "(?:southeast|south-east|आग्नेय|agneya)",
+      "(?:south|दक्षिण)",
+      "(?:southwest|south-west|नैऋत्य|nairutya)",
+      "(?:west|पश्चिम)",
+      "(?:northwest|north-west|वायव्य|vayavya)",
+      "(?:center|centre|brahma sthan|ब्रह्म स्थान|madhya)"
+    ],
+    "confidence_rules": {
+      "cardinal_direction_word": 0.95,
+      "with_position_context": 0.90,
+      "in_room_context": 0.85
+    },
+    "examples": [
+      "north entrance",
+      "northeast corner",
+      "brahma sthan (center)",
+      "उत्तर में"
+    ]
+  },
+  "rooms": {
+    "entity_type": "room",
+    "count": 10,
+    "patterns": [
+      "(?:bedroom|bed room|शयनकक्ष)",
+      "(?:kitchen|रसोई|rasoi)",
+      "(?:living room|drawing room|ड्राइंग रूम)",
+      "(?:puja room|pooja room|पूजा कक्ष|prayer room)",
+      "(?:office|study|study room|कार्यालय|office room)",
+      "(?:bathroom|toilet|restroom|wash room|बाथरूम|शौचालय)",
+      "(?:entrance|entry|door|foyer|प्रवेश द्वार|दरवाज़ा)",
+      "(?:garage|गैराज)",
+      "(?:storage|storeroom|store room|गोदाम|pantry)",
+      "(?:courtyard|outdoor|exterior|आंगन|veranda)"
+    ],
+    "confidence_rules": {
+      "explicit_room_name": 0.95,
+      "with_direction_context": 0.90,
+      "implied_from_activity": 0.75
+    },
+    "examples": [
+      "master bedroom in north",
+      "kitchen should not face northeast",
+      "पूजा कक्ष को उत्तर में रखें"
+    ]
+  },
+  "vastu_doshas": {
+    "entity_type": "vastu_dosha",
+    "count": 20,
+    "patterns": [
+      "(?:blocked entry|blocked north|अवरुद्ध प्रवेश)",
+      "(?:central pit|center pit|केंद्रीय गड्ढा|सेंट्रल पिट)",
+      "(?:northwest toilet|toilet in northwest|उत्तरपश्चिम में शौचालय)",
+      "(?:fire element northeast|अग्नि उत्तरपूर्व में)",
+      "(?:beam depression|beam above|काष्ठ दोष|छत की किरण)",
+      "(?:sloping roof|roof slope|ढलान वाली छत|छत का झुकाव)",
+      "(?:broken mirror|mirror opposite|टूटा हुआ दर्पण|आईना टूटा)",
+      "(?:stagnant water|water stagnation|जल ठहराव|पानी का ठहराव)",
+      "(?:sharp edges|angular defects|तीक्ष्ण कोण|sharp corner)",
+      "(?:heavy load north|भारी सामग्री उत्तर में)",
+      "(?:darkness|low light|अंधकार|प्रकाश की कमी)",
+      "(?:odor problems|बदबू|smell issues)",
+      "(?:southeast fire absent|दक्षिणपूर्व में अग्नि नहीं)",
+      "(?:cluttered space|clutter|अव्यवस्था|disorder)",
+      "(?:hanging beams|exposed beams|लटकती किरणें)",
+      "(?:unstable foundation|foundation defect|नींव की कमजोरी)",
+      "(?:insufficient ventilation|poor ventilation|कम हवा|वायु की कमी)",
+      "(?:wrong bed position|wrong facing|गलत दिशा में बिस्तर)",
+      "(?:west facing main door|पश्चिम मुखी द्वार)",
+      "(?:too many windows|excessive openings|बहुत सारी खिड़कियां)"
+    ],
+    "confidence_rules": {
+      "explicit_dosha_name": 0.95,
+      "with_location_context": 0.90,
+      "from_defect_description": 0.80
+    },
+    "examples": [
+      "blocked entry causes anxiety",
+      "northwest में toilet होना बहुत बुरा है",
+      "central pit leading to financial loss"
+    ]
+  },
+  "remedies": {
+    "entity_type": "remedy",
+    "count": 15,
+    "patterns": [
+      "(?:place mirror|use mirror|दर्पण लगाएं|mirror remedy)",
+      "(?:light colors|हल्के रंग|bright colors)",
+      "(?:salt remedy|salt cure|नमक का इलाज|salt pot)",
+      "(?:water fountain|water feature|फव्वारा|water element)",
+      "(?:crystal|क्रिस्टल)",
+      "(?:yantra|यंत्र)",
+      "(?:lamp|light|दीप|oil lamp)",
+      "(?:wind chime|bells|घंटी|chime)",
+      "(?:plant|green plant|पौधा|indoor plant)",
+      "(?:essential oil|अरोमा|fragrance)",
+      "(?:symbol|sign|चिन्ह)",
+      "(?:vastu pyramid|pyramid|पिरामिड)",
+      "(?:copper|तांबा)",
+      "(?:incense|अगरबत्ती|dhoop)",
+      "(?:repaint|color change|रंग बदलें|recolor)"
+    ],
+    "confidence_rules": {
+      "explicit_remedy_action": 0.95,
+      "with_dosha_context": 0.90,
+      "suggested_remedy": 0.85
+    },
+    "examples": [
+      "place mirror to correct blocked entry",
+      "use light colors in heavy areas",
+      "salt remedy के लिए नमक का बर्तन रखें"
+    ]
+  },
+  "elements": {
+    "entity_type": "element",
+    "count": 5,
+    "patterns": [
+      "(?:water|जल|aquatic)",
+      "(?:fire|अग्नि|agni)",
+      "(?:earth|पृथ्वी|bhumi)",
+      "(?:air|वायु|vayu)",
+      "(?:space|आकाश|akasha)"
+    ],
+    "confidence_rules": {
+      "explicit_element": 0.95,
+      "in_direction_context": 0.90,
+      "in_property_description": 0.85
+    },
+    "examples": [
+      "north direction is water element",
+      "उत्तर जल तत्व का है",
+      "fire element in southeast"
+    ]
+  },
+  "colors": {
+    "entity_type": "color",
+    "count": 10,
+    "patterns": [
+      "(?:blue|नीला|नीले रंग)",
+      "(?:black|काला|काले रंग)",
+      "(?:white|सफेद|सफेद रंग)",
+      "(?:red|लाल|लाले रंग)",
+      "(?:green|हरा|हरे रंग)",
+      "(?:yellow|पीला|पीले रंग)",
+      "(?:purple|बैंगनी)",
+      "(?:orange|नारंगी)",
+      "(?:gray|grey|स्लेटी|grey color)",
+      "(?:brown|भूरा)"
+    ],
+    "confidence_rules": {
+      "explicit_color_name": 0.95,
+      "with_direction_context": 0.90,
+      "in_recommendation": 0.85
+    },
+    "examples": [
+      "north should have blue colors",
+      "northeast को पीले रंग से सजाएं",
+      "use black or white in north"
+    ]
+  },
+  "materials": {
+    "entity_type": "material",
+    "count": 8,
+    "patterns": [
+      "(?:wood|लकड़ी|wooden)",
+      "(?:stone|पत्थर|stone material)",
+      "(?:marble|संगमरमर|marble stone)",
+      "(?:ceramic|मिट्टी का बर्तन)",
+      "(?:metal|धातु|metallic)",
+      "(?:glass|शीशा|काँच)",
+      "(?:brick|ईंट)",
+      "(?:concrete|कंक्रीट)"
+    ],
+    "confidence_rules": {
+      "explicit_material": 0.95,
+      "in_construction_context": 0.90,
+      "in_recommendation": 0.85
+    },
+    "examples": [
+      "use wooden doors",
+      "marble for northeast entrance",
+      "लकड़ी का दरवाज़ा उत्तर में"
+    ]
+  },
+  "geometric_principles": {
+    "entity_type": "geometric_principle",
+    "count": 10,
+    "patterns": [
+      "(?:golden ratio|स्वर्ण अनुपात)",
+      "(?:sacred geometry|पवित्र ज्यामिति)",
+      "(?:proportion|अनुपात|proportional)",
+      "(?:symmetry|समरूपता)",
+      "(?:right angle|समकोण)",
+      "(?:diagonal alignment|विकर्ण संरेखण)",
+      "(?:mandala|मंडल)",
+      "(?:sri yantra|श्री यंत्र)",
+      "(?:fibonacci|फिबोनैची)",
+      "(?:vastu pada|वास्तु पद)"
+    ],
+    "confidence_rules": {
+      "explicit_principle": 0.95,
+      "in_geometry_context": 0.90,
+      "implied": 0.75
+    },
+    "examples": [
+      "golden ratio in room dimensions",
+      "mandala pattern for puja room",
+      "वास्तु पद के अनुसार घर बनाएं"
+    ]
+  },
+  "sacred_geometry": {
+    "entity_type": "sacred_geometry",
+    "count": 8,
+    "patterns": [
+      "(?:square|वर्ग|चतुर्भुज)",
+      "(?:circle|वृत्त|circular)",
+      "(?:triangle|त्रिभुज)",
+      "(?:octagon|अष्टभुज)",
+      "(?:hexagon|षडभुज)",
+      "(?:spiral|सर्पिल)",
+      "(?:star|तारा|star shape)",
+      "(?:lotus|कमल|कमल का फूल)"
+    ],
+    "confidence_rules": {
+      "explicit_shape": 0.95,
+      "in_geometry_context": 0.90,
+      "implied": 0.75
+    },
+    "examples": [
+      "square shaped plot",
+      "circular mandala",
+      "octagon for पूजा कक्ष"
+    ]
+  },
+  "text_sources": {
+    "entity_type": "text_source",
+    "count": 107,
+    "patterns": [
+      "(?:mayamatam|मयमतम)",
+      "(?:brihat samhita|बृहत् संहिता)",
+      "(?:aparajita priccha|अपराजिता पृच्छा)",
+      "(?:matsya purana|मत्स्य पुराण)",
+      "(?:vastu vidya|वास्तु विद्या)",
+      "(?:silparatna|शिल्परत्न)",
+      "(?:manasara|मानसार)",
+      "(?:kashyapa samhita|कश्यप संहिता)",
+      "(?:samarangana sutradhar|समरांगण सूत्रधार)",
+      "(?:bhavana mandana|भवन मंडन)",
+      "(?:upanishad|उपनिषद)",
+      "(?:shukraniti|शुक्रनीति)",
+      "(?:devala smriti|देवल स्मृति)",
+      "(?:Rig Veda|ऋग्वेद)",
+      "(?:Yajur Veda|यजुर्वेद)"
+    ],
+    "confidence_rules": {
+      "explicit_text_name": 0.95,
+      "cited_as_authority": 0.95,
+      "mentioned_indirectly": 0.75
+    },
+    "examples": [
+      "according to Mayamatam",
+      "Brihat Samhita में कहा गया है",
+      "as per Aparajita Priccha"
+    ]
+  },
+  "dosha_correlation": {
+    "entity_type": "dosha_correlation",
+    "count": 3,
+    "patterns": [
+      "(?:vata|वात)",
+      "(?:pitta|पित्त)",
+      "(?:kapha|कफ)"
+    ],
+    "confidence_rules": {
+      "explicit_dosha": 0.95,
+      "in_ayurveda_context": 0.90
+    },
+    "examples": [
+      "वात दोष को बढ़ाता है",
+      "pitta imbalance",
+      "kapha aggravation"
+    ]
+  },
+  "health_impacts": {
+    "entity_type": "health_impact",
+    "count": 15,
+    "patterns": [
+      "(?:anxiety|चिंता|stress)",
+      "(?:insomnia|sleep disorder|नींद की समस्या)",
+      "(?:financial loss|धन की हानि|poverty)",
+      "(?:relationship problems|संबंधों में तनाव)",
+      "(?:health issues|स्वास्थ्य समस्या)",
+      "(?:depression|अवसाद|mental health)",
+      "(?:respiratory problems|श्वसन रोग)",
+      "(?:digestive issues|पाचन समस्या)",
+      "(?:bone problems|हड्डी का रोग)",
+      "(?:joint pain|जोड़ों का दर्द)",
+      "(?:skin disease|त्वचा रोग)",
+      "(?:eye problems|आंख की समस्या)",
+      "(?:headache|सिरदर्द)",
+      "(?:lethargy|आलस्य)",
+      "(?:infertility|बांझपन)"
+    ],
+    "confidence_rules": {
+      "explicit_health_condition": 0.95,
+      "in_health_context": 0.90,
+      "implied_from_dosha": 0.80
+    },
+    "examples": [
+      "blocked entry causes anxiety",
+      "northwest toilet से सांस की समस्या हो सकती है",
+      "sleep problems from wrong bedroom placement"
+    ]
+  },
+  "chakras": {
+    "entity_type": "chakra",
+    "count": 7,
+    "patterns": [
+      "(?:root chakra|मूलाधार)",
+      "(?:sacral chakra|स्वाधिष्ठान)",
+      "(?:solar plexus|नाभि चक्र|मणिपूर)",
+      "(?:heart chakra|हृदय चक्र|अनाहत)",
+      "(?:throat chakra|गले का चक्र|विशुद्धि)",
+      "(?:third eye|तीसरी आंख|आज्ञा)",
+      "(?:crown chakra|सहस्रार|crown)"
+    ],
+    "confidence_rules": {
+      "explicit_chakra": 0.95,
+      "in_spiritual_context": 0.90
+    },
+    "examples": [
+      "north activates root chakra",
+      "northeast का संबंध third eye से है",
+      "heart chakra in center"
+    ]
+  },
+  "temporal_aspects": {
+    "entity_type": "temporal_aspect",
+    "count": 12,
+    "patterns": [
+      "(?:morning|सुबह)",
+      "(?:afternoon|दोपहर)",
+      "(?:evening|शाम|संध्या)",
+      "(?:night|रात)",
+      "(?:spring|वसंत)",
+      "(?:summer|गर्मी|ग्रीष्म)",
+      "(?:autumn|पतझड़|शरद)",
+      "(?:winter|सर्दी|शीत)",
+      "(?:sunrise|सूर्योदय)",
+      "(?:sunset|सूर्यास्त)",
+      "(?:full moon|पूर्णिमा)",
+      "(?:new moon|अमावस्या)"
+    ],
+    "confidence_rules": {
+      "explicit_temporal": 0.95,
+      "in_timing_context": 0.90
+    },
+    "examples": [
+      "east-facing for morning sun",
+      "वसंत में यह उपचार करें",
+      "full moon night remedies"
+    ]
+  },
+  "room_elements": {
+    "entity_type": "room_element",
+    "count": 50,
+    "patterns": [
+      "(?:door|दरवाज़ा)",
+      "(?:window|खिड़की)",
+      "(?:bed|बिस्तर)",
+      "(?:sofa|सोफा)",
+      "(?:table|टेबल|मेज़)",
+      "(?:chair|कुर्सी)",
+      "(?:shelf|अलमारी)",
+      "(?:staircase|सीढ़ी|stairs)",
+      "(?:ceiling|छत|roof)",
+      "(?:floor|फर्श|जमीन)",
+      "(?:wall|दीवार)",
+      "(?:pillar|खम्भा|column)",
+      "(?:beam|किरण)",
+      "(?:beam above bed|सिर के ऊपर किरण)",
+      "(?:balcony|बालकनी|veranda)",
+      "(?:kitchen counter|रसोई का काउंटर)",
+      "(?:stove|चूल्हा|cooktop)",
+      "(?:sink|सिंक)",
+      "(?:toilet|शौचालय|toilet seat)",
+      "(?:bathtub|नहाने का टब)",
+      "(?:shower|शावर)",
+      "(?:altar|वेदी|prayer altar)",
+      "(?:meditation seat|ध्यान आसन)",
+      "(?:entrance door|प्रवेश द्वार)",
+      "(?:back door|पिछला दरवाज़ा)",
+      "(?:main gate|मुख्य द्वार)",
+      "(?:mirror|दर्पण|आईना)",
+      "(?:painting|चित्र)",
+      "(?:decoration|सजावट)",
+      "(?:lighting|रोशनी|प्रकाश)"
+    ],
+    "confidence_rules": {
+      "explicit_element": 0.95,
+      "in_room_context": 0.90,
+      "positional_reference": 0.85
+    },
+    "examples": [
+      "door position matters",
+      "bed का सिर उत्तर की ओर होना चाहिए",
+      "mirror opposite door"
+    ]
+  }
+}

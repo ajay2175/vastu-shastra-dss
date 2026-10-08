@@ -1,0 +1,324 @@
+{
+  "directions": {
+    "patterns": [
+      "(?:north|उत्तर)",
+      "(?:south|दक्षिण)",
+      "(?:east|पूर्व)",
+      "(?:west|पश्चिम)",
+      "(?:northeast|उत्तरपूर्व)",
+      "(?:southeast|दक्षिणपूर्व)",
+      "(?:southwest|दक्षिणपश्चिम)",
+      "(?:northwest|उत्तरपश्चिम)"
+    ],
+    "entity_type": "direction",
+    "core": true,
+    "confidence": 0.95
+  },
+  "rooms": {
+    "patterns": [
+      "bedroom",
+      "bathroom",
+      "kitchen",
+      "living room",
+      "dining room",
+      "office",
+      "study room",
+      "pooja room",
+      "prayer room",
+      "entrance",
+      "foyer",
+      "corridor",
+      "staircase",
+      "balcony",
+      "terrace",
+      "garage",
+      "garden",
+      "शयनकक्ष",
+      "रसोई",
+      "ड्राइंग रूम",
+      "भोजन कक्ष",
+      "पूजा कक्ष"
+    ],
+    "entity_type": "room",
+    "core": true,
+    "confidence": 0.9
+  },
+  "doshas": {
+    "patterns": [
+      "(?:vata|वात)",
+      "(?:pitta|पित्त)",
+      "(?:kapha|कफ)",
+      "(?:vata dosha|वात दोष)",
+      "(?:pitta dosha|पित्त दोष)",
+      "(?:kapha dosha|कफ दोष)",
+      "(?:air element|वायु तत्व)",
+      "(?:fire element|अग्नि तत्व)",
+      "(?:water element|जल तत्व)",
+      "(?:earth element|पृथ्वी तत्व)",
+      "(?:ether element|आकाश तत्व)"
+    ],
+    "entity_type": "dosha",
+    "core": true,
+    "confidence": 0.95
+  },
+  "elements": {
+    "patterns": [
+      "(?:earth|पृथ्वी)",
+      "(?:water|जल)",
+      "(?:fire|अग्नि)",
+      "(?:air|वायु)",
+      "(?:ether|आकाश)",
+      "(?:mud|मिट्टी)",
+      "(?:stone|पत्थर)",
+      "(?:wood|लकड़ी)",
+      "(?:metal|धातु)",
+      "(?:clay|मिट्टी)"
+    ],
+    "entity_type": "element",
+    "core": true,
+    "confidence": 0.9
+  },
+  "remedies": {
+    "patterns": [
+      "crystal",
+      "gemstone",
+      "metal plate",
+      "water fountain",
+      "mirror",
+      "painting",
+      "plant",
+      "light",
+      "wind chime",
+      "salt",
+      "camphor",
+      "incense",
+      "yantras",
+      "chakra",
+      "तांत्रिक",
+      "रत्न",
+      "धातु",
+      "कलश",
+      "दीप",
+      "पुष्प"
+    ],
+    "entity_type": "remedy",
+    "core": true,
+    "confidence": 0.85
+  },
+  "colors": {
+    "patterns": [
+      "red|रेड",
+      "blue|नीला",
+      "green|हरा",
+      "yellow|पीला",
+      "white|सफेद",
+      "black|काला",
+      "orange|नारंगी",
+      "purple|बैंगनी",
+      "pink|गुलाबी",
+      "brown|भूरा",
+      "grey|ग्रे"
+    ],
+    "entity_type": "color",
+    "core": false,
+    "confidence": 0.85
+  },
+  "health_impacts": {
+    "patterns": [
+      "health",
+      "wealth",
+      "prosperity",
+      "relationships",
+      "career",
+      "education",
+      "stress",
+      "anxiety",
+      "depression",
+      "sleep",
+      "energy",
+      "immunity",
+      "digestion",
+      "स्वास्थ्य",
+      "धन",
+      "समृद्धि",
+      "रिश्ते",
+      "कैरियर"
+    ],
+    "entity_type": "health_impact",
+    "core": false,
+    "confidence": 0.8
+  },
+  "shapes": {
+    "patterns": [
+      "square",
+      "rectangle",
+      "circle",
+      "triangle",
+      "hexagon",
+      "octagon",
+      "L-shaped",
+      "U-shaped",
+      "spiral",
+      "वर्ग",
+      "वृत्त",
+      "त्रिकोण"
+    ],
+    "entity_type": "shape",
+    "core": true,
+    "confidence": 0.85
+  },
+  "materials": {
+    "patterns": [
+      "marble",
+      "granite",
+      "tile",
+      "concrete",
+      "wood",
+      "glass",
+      "metal",
+      "copper",
+      "brass",
+      "iron",
+      "silver",
+      "gold",
+      "plaster",
+      "paint",
+      "संगमरमर",
+      "लकड़ी",
+      "कांच"
+    ],
+    "entity_type": "material",
+    "core": true,
+    "confidence": 0.85
+  },
+  "measurements": {
+    "patterns": [
+      "(?:\\d+\\s*(?:feet|ft|फुट))",
+      "(?:\\d+\\s*(?:meters|m|मीटर))",
+      "(?:\\d+\\s*(?:inches|in|इंच))",
+      "(?:\\d+\\s*(?:centimeters|cm|सेमी))",
+      "(?:\\d+\\s*(?:square|वर्ग))"
+    ],
+    "entity_type": "measurement",
+    "core": false,
+    "confidence": 0.8
+  },
+  "time_periods": {
+    "patterns": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night",
+      "dawn",
+      "dusk",
+      "sunrise",
+      "sunset",
+      "spring",
+      "summer",
+      "monsoon",
+      "winter",
+      "प्रातः",
+      "संध्या",
+      "रात",
+      "वसंत",
+      "ग्रीष्म"
+    ],
+    "entity_type": "time_period",
+    "core": false,
+    "confidence": 0.8
+  },
+  "energies": {
+    "patterns": [
+      "positive energy",
+      "negative energy",
+      "chi",
+      "prana",
+      "cosmic energy",
+      "spiritual energy",
+      "life force",
+      "आत्मा",
+      "शक्ति",
+      "ऊर्जा",
+      "प्राण",
+      "चेतना"
+    ],
+    "entity_type": "energy",
+    "core": true,
+    "confidence": 0.8
+  },
+  "water_features": {
+    "patterns": [
+      "fountain",
+      "pond",
+      "aquarium",
+      "water body",
+      "waterfall",
+      "stream",
+      "well",
+      "kund",
+      "कुंड",
+      "तालाब",
+      "जलाशय"
+    ],
+    "entity_type": "water_feature",
+    "core": false,
+    "confidence": 0.85
+  },
+  "obstacles": {
+    "patterns": [
+      "blockage",
+      "obstruction",
+      "clutter",
+      "dead plants",
+      "broken objects",
+      "stagnant water",
+      "darkness",
+      "noise",
+      "अवरोध",
+      "बाधा",
+      "गंदगी"
+    ],
+    "entity_type": "obstacle",
+    "core": false,
+    "confidence": 0.75
+  },
+  "principles": {
+    "patterns": [
+      "five elements",
+      "balance",
+      "harmony",
+      "flow",
+      "energy circulation",
+      "natural light",
+      "ventilation",
+      "पंचतत्व",
+      "संतुलन",
+      "सामंजस्य",
+      "प्रवाह"
+    ],
+    "entity_type": "principle",
+    "core": true,
+    "confidence": 0.8
+  },
+  "architectural_elements": {
+    "patterns": [
+      "pillar",
+      "column",
+      "wall",
+      "door",
+      "window",
+      "roof",
+      "foundation",
+      "beam",
+      "arch",
+      "niche",
+      "सीढ़ी",
+      "खंभा",
+      "दीवार",
+      "दरवाज़ा"
+    ],
+    "entity_type": "architectural_element",
+    "core": true,
+    "confidence": 0.85
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "kg_builder": {
+    "entity_extraction": {
+      "pattern_based_enabled": true,
+      "llm_assisted_enabled": true,
+      "llm_sample_size": 10,
+      "confidence_threshold": 0.6
+    },
+    "relation_extraction": {
+      "enabled": true,
+      "confidence_threshold": 0.5,
+      "bidirectional_relations": ["HAS_ELEMENT", "BELONGS_TO"]
+    },
+    "kg_construction": {
+      "deduplication_enabled": true,
+      "deduplication_threshold": 0.85,
+      "validation_enabled": true,
+      "compute_statistics": true
+    },
+    "output": {
+      "save_kg": true,
+      "save_indices": true,
+      "save_statistics": true,
+      "format": "json"
+    }
+  },
+  "entity_types": [
+    "direction",
+    "room",
+    "dosha",
+    "element",
+    "remedy",
+    "color",
+    "health_impact",
+    "shape",
+    "material",
+    "measurement",
+    "time_period",
+    "energy",
+    "water_feature",
+    "obstacle",
+    "principle",
+    "architectural_element"
+  ],
+  "relation_types": [
+    "HAS_ELEMENT",
+    "LOCATED_IN",
+    "CAUSES_IMPACT",
+    "REMEDIED_BY",
+    "CONFLICTS_WITH",
+    "ENHANCES",
+    "BELONGS_TO"
+  ],
+  "performance": {
+    "batch_size": 32,
+    "max_workers": 4,
+    "timeout_seconds": 300
+  }
+}
