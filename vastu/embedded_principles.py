@@ -834,9 +834,212 @@ def list_all_rooms() -> List[str]:
     return list(ROOM_PLACEMENTS.keys())
 
 
+# ============================================================================
+# ADVICE DATACLASS
+# ============================================================================
+
+@dataclass
+class Advice:
+    """Advice data structure."""
+    principle: str
+    direction: str
+    reasoning: str
+    recommendation: str
+
+
+# ============================================================================
+# VASTU PRINCIPLES WRAPPER CLASS
+# ============================================================================
+
+class VastuPrinciples:
+    """Wrapper class providing all methods expected by StandaloneConsultation."""
+
+    def __init__(self):
+        """Initialize VastuPrinciples."""
+        pass
+
+    def validate_layout(self, space_details: Dict[str, Any]) -> Dict[str, Any]:
+        """Validate space layout for Vastu compliance."""
+        direction = space_details.get("direction", "").lower()
+        space_type = space_details.get("type", "").lower()
+
+        validation_score = 75  # Default score
+
+        # Check for issues
+        issues = space_details.get("issues", [])
+        if issues:
+            validation_score -= len(issues) * 10
+
+        # Check direction suitability
+        if direction and space_type:
+            room_info = get_room_placement(space_type)
+            if room_info:
+                if direction in room_info.get("avoid", []):
+                    validation_score -= 20
+                elif direction == room_info.get("primary_optimal"):
+                    validation_score += 10
+
+        validation_score = max(0, min(100, validation_score))
+
+        return {
+            "validation_score": validation_score,
+            "issues_detected": len(issues),
+            "recommendations": ["Keep space clean", "Ensure proper lighting", "Balance elements"]
+        }
+
+    def generate_advice(self, space_details: Dict[str, Any]) -> List[Advice]:
+        """Generate advice for a space."""
+        advice_list = []
+        direction = space_details.get("direction", "").lower()
+        space_type = space_details.get("type", "").lower()
+
+        # Get direction advice
+        if direction in DIRECTIONS:
+            dir_info = DIRECTIONS[direction]
+            advice_list.append(Advice(
+                principle=f"Apply {direction.title()} directional principles",
+                direction=direction,
+                reasoning=f"The {direction} is governed by {dir_info.get('governing_deity')}",
+                recommendation=f"Follow {direction} guidelines for this space"
+            ))
+
+        # Get room placement advice
+        if space_type in ROOM_PLACEMENTS:
+            room_info = ROOM_PLACEMENTS[space_type]
+            advice_list.append(Advice(
+                principle=f"Optimal {space_type} placement",
+                direction=room_info.get("primary_optimal", ""),
+                reasoning=f"The {space_type} works best in {room_info.get('primary_optimal')} direction",
+                recommendation=f"Consider relocation if not in optimal direction"
+            ))
+
+        if not advice_list:
+            advice_list.append(Advice(
+                principle="General Vastu principles",
+                direction="center",
+                reasoning="Keep Brahma Sthana clear and clean",
+                recommendation="Maintain central space"
+            ))
+
+        return advice_list
+
+    def get_remedy_suggestions(self, issue: str) -> Dict[str, Dict[str, str]]:
+        """Get remedy suggestions for an issue."""
+        remedies = {
+            "color_correction": {
+                "white": "Use white to purify and expand space",
+                "yellow": "Use yellow to bring warmth and knowledge",
+                "blue": "Use blue to bring calm and clarity"
+            },
+            "element_balancing": {
+                "water": "Add water feature (fountain/aquarium) to balance",
+                "fire": "Add lights or candles to activate fire element",
+                "earth": "Add plants or stones for grounding"
+            },
+            "mirror_placement": {
+                "north_wall": "Place mirror on north wall for prosperity",
+                "east_wall": "Place mirror on east wall for health",
+                "opposite_corner": "Place mirror opposite sharp corner"
+            }
+        }
+        return remedies
+
+    def suggest_color_for_space(self, space_details: Dict[str, Any]) -> str:
+        """Suggest a color for a space."""
+        direction = space_details.get("direction", "").lower()
+        space_type = space_details.get("type", "").lower()
+
+        # Check room-specific color
+        if space_type in ROOM_PLACEMENTS:
+            room_info = ROOM_PLACEMENTS[space_type]
+            if "colors" in room_info:
+                return room_info["colors"].get("best", "White")
+
+        # Check direction-specific color
+        if direction in DIRECTIONS:
+            dir_info = DIRECTIONS[direction]
+            colors = dir_info.get("colors", {})
+            if isinstance(colors, dict):
+                return colors.get("primary", "White")
+
+        return "White"
+
+    def get_element_for_direction(self, direction: str) -> str:
+        """Get element associated with a direction."""
+        direction = direction.lower()
+        if direction in DIRECTIONS:
+            return DIRECTIONS[direction].get("element", "Unknown")
+        return "Unknown"
+
+    def get_direction_advice(self, direction: str) -> Optional[Dict[str, Any]]:
+        """Get detailed advice for a direction."""
+        direction = direction.lower()
+        if direction not in DIRECTIONS:
+            return None
+
+        dir_info = DIRECTIONS[direction]
+        return {
+            "name": dir_info.get("name"),
+            "description": f"The {dir_info.get('name')} is governed by {dir_info.get('governing_deity')}",
+            "key_points": dir_info.get("characteristics", [])[:3],
+            "elements": [dir_info.get("element", "")],
+            "colors": list(dir_info.get("colors", {}).values()) if isinstance(dir_info.get("colors"), dict) else [],
+            "remedies": self._get_direction_remedies(direction)
+        }
+
+    def get_room_guidelines(self, room_type: str) -> Optional[Dict[str, Any]]:
+        """Get guidelines for a room type."""
+        room_type = room_type.lower()
+        if room_type not in ROOM_PLACEMENTS:
+            return None
+
+        room_info = ROOM_PLACEMENTS[room_type]
+        return {
+            "best_directions": [room_info.get("primary_optimal", "")] + room_info.get("secondary_optimal", []),
+            "avoid": room_info.get("avoid", []),
+            "shape": "Square or rectangular",
+            "window_placement": "East or North for natural light",
+            "color": room_info.get("colors", {}).get("best", "White") if isinstance(room_info.get("colors"), dict) else "White",
+            "furniture": "Place heavy items in appropriate direction"
+        }
+
+    def check_defect(self, defect_type: str) -> Optional[Dict[str, Any]]:
+        """Check for a specific Vastu defect."""
+        defect_key = defect_type.lower().replace(" ", "_")
+        if defect_key not in VASTU_DOSHAS:
+            return None
+
+        dosha_info = VASTU_DOSHAS[defect_key]
+        return {
+            "problem": dosha_info.get("description"),
+            "impact": str(dosha_info.get("impacts", {}).get("health", ["Unknown"])[0]),
+            "severity": dosha_info.get("severity"),
+            "remedies": dosha_info.get("remedies", [])
+        }
+
+    def _get_direction_remedies(self, direction: str) -> List[str]:
+        """Get remedies specific to a direction."""
+        remedies_map = {
+            "northeast": ["Keep clear and clean", "Install bright light", "Place deity idol"],
+            "north": ["Enhance with water feature", "Use mirrors", "Promote prosperity items"],
+            "east": ["Maximize natural light", "Place indoor plants", "Use warm colors"],
+            "southeast": ["Ideal for kitchen", "Use balanced fire element", "Keep ventilation"],
+            "south": ["Use earth tones", "Place heavy furniture", "Ensure stability"],
+            "southwest": ["Heavy items placement", "Ground yourself here", "Stability focus"],
+            "west": ["Promote introspection", "Use cool colors", "Evening light exposure"],
+            "northwest": ["Guest areas", "Keep light", "Avoid heavy items"],
+            "center": ["Keep absolutely clear", "Daily meditation", "Install Brahma Yantra"],
+        }
+        return remedies_map.get(direction, ["Maintain cleanliness", "Proper lighting", "Element balance"])
+
+
 if __name__ == "__main__":
     print("Vastu Shastra Embedded Knowledge Base loaded successfully!")
     print(f"Directions: {len(list_all_directions())}")
     print(f"Doshas: {len(list_all_doshas())}")
     print(f"Rooms: {len(list_all_rooms())}")
     print(f"Remedies: {len(REMEDIES)}")
+
+    # Test VastuPrinciples
+    principles = VastuPrinciples()
+    print(f"\nVastuPrinciples class loaded successfully!")

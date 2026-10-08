@@ -21,7 +21,7 @@ class Settings(BaseSettings):
     debug: bool = False
 
     # Anthropic API
-    anthropic_api_key: str
+    anthropic_api_key: Optional[str] = None
     anthropic_model: str = "claude-opus-4-1-20250805"
     anthropic_timeout: int = 60
 
@@ -59,9 +59,9 @@ class Settings(BaseSettings):
 
     # Paths
     project_root: Path = Path(__file__).parent.parent
-    data_dir: Path = None
-    kg_dir: Path = None
-    vastu_texts_dir: Path = None
+    data_dir: Optional[Path] = None
+    kg_dir: Optional[Path] = None
+    vastu_texts_dir: Optional[Path] = None
 
     def __init__(self, **data):
         super().__init__(**data)

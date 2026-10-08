@@ -1,0 +1,2102 @@
+{
+  "nodes": {
+    "directions_north": {
+      "id": "directions_north",
+      "type": "directions",
+      "label": "north",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_001"
+      ],
+      "confidence": 0.95,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "directions_east": {
+      "id": "directions_east",
+      "type": "directions",
+      "label": "east",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_001"
+      ],
+      "confidence": 0.95,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "directions_south": {
+      "id": "directions_south",
+      "type": "directions",
+      "label": "south",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_002"
+      ],
+      "confidence": 0.95,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "directions_west": {
+      "id": "directions_west",
+      "type": "directions",
+      "label": "west",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_004"
+      ],
+      "confidence": 0.95,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "doshas_water_element": {
+      "id": "doshas_water_element",
+      "type": "doshas",
+      "label": "water element",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_001"
+      ],
+      "confidence": 0.95,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "doshas_fire_element": {
+      "id": "doshas_fire_element",
+      "type": "doshas",
+      "label": "fire element",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_002"
+      ],
+      "confidence": 0.95,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "doshas_vata": {
+      "id": "doshas_vata",
+      "type": "doshas",
+      "label": "Vata",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_007"
+      ],
+      "confidence": 0.95,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "doshas_pitta": {
+      "id": "doshas_pitta",
+      "type": "doshas",
+      "label": "Pitta",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_007"
+      ],
+      "confidence": 0.95,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "doshas_vata_dosha": {
+      "id": "doshas_vata_dosha",
+      "type": "doshas",
+      "label": "Vata dosha",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_007"
+      ],
+      "confidence": 0.95,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "doshas_pitta_dosha": {
+      "id": "doshas_pitta_dosha",
+      "type": "doshas",
+      "label": "Pitta dosha",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_007"
+      ],
+      "confidence": 0.95,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "doshas_air_element": {
+      "id": "doshas_air_element",
+      "type": "doshas",
+      "label": "air element",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_007"
+      ],
+      "confidence": 0.95,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "doshas_kapha": {
+      "id": "doshas_kapha",
+      "type": "doshas",
+      "label": "Kapha",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_008"
+      ],
+      "confidence": 0.95,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "doshas_kapha_dosha": {
+      "id": "doshas_kapha_dosha",
+      "type": "doshas",
+      "label": "Kapha dosha",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_008"
+      ],
+      "confidence": 0.95,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "doshas_earth_element": {
+      "id": "doshas_earth_element",
+      "type": "doshas",
+      "label": "earth element",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_008"
+      ],
+      "confidence": 0.95,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "elements_water": {
+      "id": "elements_water",
+      "type": "elements",
+      "label": "water",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_001"
+      ],
+      "confidence": 0.9,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "elements_fire": {
+      "id": "elements_fire",
+      "type": "elements",
+      "label": "fire",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_002"
+      ],
+      "confidence": 0.9,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "elements_air": {
+      "id": "elements_air",
+      "type": "elements",
+      "label": "air",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_007"
+      ],
+      "confidence": 0.9,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "elements_earth": {
+      "id": "elements_earth",
+      "type": "elements",
+      "label": "earth",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_008"
+      ],
+      "confidence": 0.9,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "elements_ether": {
+      "id": "elements_ether",
+      "type": "elements",
+      "label": "ether",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_008"
+      ],
+      "confidence": 0.9,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "elements_stone": {
+      "id": "elements_stone",
+      "type": "elements",
+      "label": "stone",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_009"
+      ],
+      "confidence": 0.9,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "elements_metal": {
+      "id": "elements_metal",
+      "type": "elements",
+      "label": "metal",
+      "aliases": [
+        "metal"
+      ],
+      "source_chunks": [
+        "chunk_009",
+        "chunk_009"
+      ],
+      "confidence": 0.9,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "elements_wood": {
+      "id": "elements_wood",
+      "type": "elements",
+      "label": "wood",
+      "aliases": [
+        "wood"
+      ],
+      "source_chunks": [
+        "chunk_011",
+        "chunk_011"
+      ],
+      "confidence": 0.9,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "remedies_water_fountain": {
+      "id": "remedies_water_fountain",
+      "type": "remedies",
+      "label": "water fountain",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_001"
+      ],
+      "confidence": 0.85,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "remedies_mirror": {
+      "id": "remedies_mirror",
+      "type": "remedies",
+      "label": "mirror",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_004"
+      ],
+      "confidence": 0.85,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "remedies_light": {
+      "id": "remedies_light",
+      "type": "remedies",
+      "label": "light",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_006"
+      ],
+      "confidence": 0.85,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "remedies_crystal": {
+      "id": "remedies_crystal",
+      "type": "remedies",
+      "label": "crystal",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_009"
+      ],
+      "confidence": 0.85,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "remedies_gemstone": {
+      "id": "remedies_gemstone",
+      "type": "remedies",
+      "label": "gemstone",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_009"
+      ],
+      "confidence": 0.85,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "remedies_metal_plate": {
+      "id": "remedies_metal_plate",
+      "type": "remedies",
+      "label": "metal plate",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_009"
+      ],
+      "confidence": 0.85,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "remedies_wind_chime": {
+      "id": "remedies_wind_chime",
+      "type": "remedies",
+      "label": "Wind chime",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_010"
+      ],
+      "confidence": 0.85,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "remedies_plant": {
+      "id": "remedies_plant",
+      "type": "remedies",
+      "label": "Plant",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_015"
+      ],
+      "confidence": 0.85,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "health_impacts_wealth": {
+      "id": "health_impacts_wealth",
+      "type": "health_impacts",
+      "label": "wealth",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_001"
+      ],
+      "confidence": 0.8,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "health_impacts_prosperity": {
+      "id": "health_impacts_prosperity",
+      "type": "health_impacts",
+      "label": "prosperity",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_001"
+      ],
+      "confidence": 0.8,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "health_impacts_career": {
+      "id": "health_impacts_career",
+      "type": "health_impacts",
+      "label": "career",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_001"
+      ],
+      "confidence": 0.8,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "health_impacts_energy": {
+      "id": "health_impacts_energy",
+      "type": "health_impacts",
+      "label": "energy",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_001"
+      ],
+      "confidence": 0.8,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "health_impacts_sleep": {
+      "id": "health_impacts_sleep",
+      "type": "health_impacts",
+      "label": "sleep",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_004"
+      ],
+      "confidence": 0.8,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "energies_spiritual_energy": {
+      "id": "energies_spiritual_energy",
+      "type": "energies",
+      "label": "spiritual energy",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_001"
+      ],
+      "confidence": 0.8,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "energies_positive_energy": {
+      "id": "energies_positive_energy",
+      "type": "energies",
+      "label": "positive energy",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_003"
+      ],
+      "confidence": 0.8,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "energies_chi": {
+      "id": "energies_chi",
+      "type": "energies",
+      "label": "chi",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_010"
+      ],
+      "confidence": 0.8,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "energies_negative_energy": {
+      "id": "energies_negative_energy",
+      "type": "energies",
+      "label": "negative energy",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_015"
+      ],
+      "confidence": 0.8,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "water_features_fountain": {
+      "id": "water_features_fountain",
+      "type": "water_features",
+      "label": "fountain",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_001"
+      ],
+      "confidence": 0.85,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "water_features_aquarium": {
+      "id": "water_features_aquarium",
+      "type": "water_features",
+      "label": "aquarium",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_001"
+      ],
+      "confidence": 0.85,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "water_features_well": {
+      "id": "water_features_well",
+      "type": "water_features",
+      "label": "well",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_006"
+      ],
+      "confidence": 0.85,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "colors_red": {
+      "id": "colors_red",
+      "type": "colors",
+      "label": "red",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_002"
+      ],
+      "confidence": 0.85,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "colors_orange": {
+      "id": "colors_orange",
+      "type": "colors",
+      "label": "orange",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_002"
+      ],
+      "confidence": 0.85,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "colors_blue": {
+      "id": "colors_blue",
+      "type": "colors",
+      "label": "blue",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_014"
+      ],
+      "confidence": 0.85,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "colors_green": {
+      "id": "colors_green",
+      "type": "colors",
+      "label": "green",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_014"
+      ],
+      "confidence": 0.85,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "colors_yellow": {
+      "id": "colors_yellow",
+      "type": "colors",
+      "label": "yellow",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_014"
+      ],
+      "confidence": 0.85,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "colors_white": {
+      "id": "colors_white",
+      "type": "colors",
+      "label": "white",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_014"
+      ],
+      "confidence": 0.85,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "materials_paint": {
+      "id": "materials_paint",
+      "type": "materials",
+      "label": "paint",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_002"
+      ],
+      "confidence": 0.85,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "materials_copper": {
+      "id": "materials_copper",
+      "type": "materials",
+      "label": "Copper",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_009"
+      ],
+      "confidence": 0.85,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "materials_brass": {
+      "id": "materials_brass",
+      "type": "materials",
+      "label": "brass",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_009"
+      ],
+      "confidence": 0.85,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "architectural_elements_wall": {
+      "id": "architectural_elements_wall",
+      "type": "architectural_elements",
+      "label": "wall",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_002"
+      ],
+      "confidence": 0.85,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "architectural_elements_door": {
+      "id": "architectural_elements_door",
+      "type": "architectural_elements",
+      "label": "door",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_011"
+      ],
+      "confidence": 0.85,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "architectural_elements_pillar": {
+      "id": "architectural_elements_pillar",
+      "type": "architectural_elements",
+      "label": "pillar",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_013"
+      ],
+      "confidence": 0.85,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "rooms_entrance": {
+      "id": "rooms_entrance",
+      "type": "rooms",
+      "label": "entrance",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_003"
+      ],
+      "confidence": 0.9,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "rooms_bedroom": {
+      "id": "rooms_bedroom",
+      "type": "rooms",
+      "label": "bedroom",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_004"
+      ],
+      "confidence": 0.9,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "rooms_kitchen": {
+      "id": "rooms_kitchen",
+      "type": "rooms",
+      "label": "kitchen",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_005"
+      ],
+      "confidence": 0.9,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "rooms_pooja_room": {
+      "id": "rooms_pooja_room",
+      "type": "rooms",
+      "label": "pooja room",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_006"
+      ],
+      "confidence": 0.9,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "rooms_prayer_room": {
+      "id": "rooms_prayer_room",
+      "type": "rooms",
+      "label": "prayer room",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_006"
+      ],
+      "confidence": 0.9,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "rooms_staircase": {
+      "id": "rooms_staircase",
+      "type": "rooms",
+      "label": "Staircase",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_012"
+      ],
+      "confidence": 0.9,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "principles_flow": {
+      "id": "principles_flow",
+      "type": "principles",
+      "label": "flow",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_003"
+      ],
+      "confidence": 0.8,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "principles_natural_light": {
+      "id": "principles_natural_light",
+      "type": "principles",
+      "label": "Natural light",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_006"
+      ],
+      "confidence": 0.8,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "principles_five_elements": {
+      "id": "principles_five_elements",
+      "type": "principles",
+      "label": "five elements",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_008"
+      ],
+      "confidence": 0.8,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "principles_balance": {
+      "id": "principles_balance",
+      "type": "principles",
+      "label": "Balance",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_008"
+      ],
+      "confidence": 0.8,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "obstacles_clutter": {
+      "id": "obstacles_clutter",
+      "type": "obstacles",
+      "label": "clutter",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_006"
+      ],
+      "confidence": 0.75,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "obstacles_blockage": {
+      "id": "obstacles_blockage",
+      "type": "obstacles",
+      "label": "blockage",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_011"
+      ],
+      "confidence": 0.75,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "obstacles_dead_plants": {
+      "id": "obstacles_dead_plants",
+      "type": "obstacles",
+      "label": "dead plants",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_015"
+      ],
+      "confidence": 0.75,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "shapes_square": {
+      "id": "shapes_square",
+      "type": "shapes",
+      "label": "Square",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_012"
+      ],
+      "confidence": 0.85,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "shapes_l_shaped": {
+      "id": "shapes_l_shaped",
+      "type": "shapes",
+      "label": "L-shaped",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_012"
+      ],
+      "confidence": 0.85,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    },
+    "shapes_spiral": {
+      "id": "shapes_spiral",
+      "type": "shapes",
+      "label": "spiral",
+      "aliases": [],
+      "source_chunks": [
+        "chunk_012"
+      ],
+      "confidence": 0.85,
+      "metadata": {
+        "pattern_matched": true
+      },
+      "description": ""
+    }
+  },
+  "edges": [
+    {
+      "source_id": "directions_east",
+      "target_id": "energies_spiritual_energy",
+      "relation_type": "ENHANCES",
+      "confidence": 0.75,
+      "supporting_chunks": [
+        "chunk_006"
+      ],
+      "bidirectional": false,
+      "metadata": {
+        "pattern_matched": true
+      }
+    },
+    {
+      "source_id": "doshas_vata_dosha",
+      "target_id": "elements_fire",
+      "relation_type": "BELONGS_TO",
+      "confidence": 0.75,
+      "supporting_chunks": [
+        "chunk_007"
+      ],
+      "bidirectional": false,
+      "metadata": {
+        "pattern_matched": true
+      }
+    },
+    {
+      "source_id": "directions_west",
+      "target_id": "health_impacts_prosperity",
+      "relation_type": "ENHANCES",
+      "confidence": 0.75,
+      "supporting_chunks": [
+        "chunk_009"
+      ],
+      "bidirectional": false,
+      "metadata": {
+        "pattern_matched": true
+      }
+    }
+  ],
+  "metadata": {
+    "timestamp": "2026-10-08T16:34:39.626147",
+    "total_nodes": 70,
+    "total_edges": 3,
+    "entity_type_counts": {
+      "directions": 4,
+      "doshas": 10,
+      "elements": 8,
+      "remedies": 8,
+      "health_impacts": 5,
+      "energies": 4,
+      "water_features": 3,
+      "colors": 6,
+      "materials": 3,
+      "architectural_elements": 3,
+      "rooms": 6,
+      "principles": 4,
+      "obstacles": 3,
+      "shapes": 3
+    },
+    "relation_type_counts": {
+      "ENHANCES": 2,
+      "BELONGS_TO": 1
+    },
+    "average_confidence": 0.866,
+    "node_degree_stats": {
+      "avg_degree": 1.0,
+      "max_in_degree": 1,
+      "max_out_degree": 1
+    }
+  },
+  "indices": {
+    "forward_index": {
+      "directions_east": [
+        "energies_spiritual_energy"
+      ],
+      "doshas_vata_dosha": [
+        "elements_fire"
+      ],
+      "directions_west": [
+        "health_impacts_prosperity"
+      ]
+    },
+    "backward_index": {
+      "energies_spiritual_energy": [
+        "directions_east"
+      ],
+      "elements_fire": [
+        "doshas_vata_dosha"
+      ],
+      "health_impacts_prosperity": [
+        "directions_west"
+      ]
+    },
+    "entity_index": {
+      "directions": {
+        "directions_north": {
+          "id": "directions_north",
+          "type": "directions",
+          "label": "north",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_001"
+          ],
+          "confidence": 0.95,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "directions_east": {
+          "id": "directions_east",
+          "type": "directions",
+          "label": "east",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_001"
+          ],
+          "confidence": 0.95,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "directions_south": {
+          "id": "directions_south",
+          "type": "directions",
+          "label": "south",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_002"
+          ],
+          "confidence": 0.95,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "directions_west": {
+          "id": "directions_west",
+          "type": "directions",
+          "label": "west",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_004"
+          ],
+          "confidence": 0.95,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        }
+      },
+      "doshas": {
+        "doshas_water_element": {
+          "id": "doshas_water_element",
+          "type": "doshas",
+          "label": "water element",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_001"
+          ],
+          "confidence": 0.95,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "doshas_fire_element": {
+          "id": "doshas_fire_element",
+          "type": "doshas",
+          "label": "fire element",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_002"
+          ],
+          "confidence": 0.95,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "doshas_vata": {
+          "id": "doshas_vata",
+          "type": "doshas",
+          "label": "Vata",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_007"
+          ],
+          "confidence": 0.95,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "doshas_pitta": {
+          "id": "doshas_pitta",
+          "type": "doshas",
+          "label": "Pitta",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_007"
+          ],
+          "confidence": 0.95,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "doshas_vata_dosha": {
+          "id": "doshas_vata_dosha",
+          "type": "doshas",
+          "label": "Vata dosha",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_007"
+          ],
+          "confidence": 0.95,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "doshas_pitta_dosha": {
+          "id": "doshas_pitta_dosha",
+          "type": "doshas",
+          "label": "Pitta dosha",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_007"
+          ],
+          "confidence": 0.95,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "doshas_air_element": {
+          "id": "doshas_air_element",
+          "type": "doshas",
+          "label": "air element",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_007"
+          ],
+          "confidence": 0.95,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "doshas_kapha": {
+          "id": "doshas_kapha",
+          "type": "doshas",
+          "label": "Kapha",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_008"
+          ],
+          "confidence": 0.95,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "doshas_kapha_dosha": {
+          "id": "doshas_kapha_dosha",
+          "type": "doshas",
+          "label": "Kapha dosha",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_008"
+          ],
+          "confidence": 0.95,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "doshas_earth_element": {
+          "id": "doshas_earth_element",
+          "type": "doshas",
+          "label": "earth element",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_008"
+          ],
+          "confidence": 0.95,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        }
+      },
+      "elements": {
+        "elements_water": {
+          "id": "elements_water",
+          "type": "elements",
+          "label": "water",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_001"
+          ],
+          "confidence": 0.9,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "elements_fire": {
+          "id": "elements_fire",
+          "type": "elements",
+          "label": "fire",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_002"
+          ],
+          "confidence": 0.9,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "elements_air": {
+          "id": "elements_air",
+          "type": "elements",
+          "label": "air",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_007"
+          ],
+          "confidence": 0.9,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "elements_earth": {
+          "id": "elements_earth",
+          "type": "elements",
+          "label": "earth",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_008"
+          ],
+          "confidence": 0.9,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "elements_ether": {
+          "id": "elements_ether",
+          "type": "elements",
+          "label": "ether",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_008"
+          ],
+          "confidence": 0.9,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "elements_stone": {
+          "id": "elements_stone",
+          "type": "elements",
+          "label": "stone",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_009"
+          ],
+          "confidence": 0.9,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "elements_metal": {
+          "id": "elements_metal",
+          "type": "elements",
+          "label": "metal",
+          "aliases": [
+            "metal"
+          ],
+          "source_chunks": [
+            "chunk_009",
+            "chunk_009"
+          ],
+          "confidence": 0.9,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "elements_wood": {
+          "id": "elements_wood",
+          "type": "elements",
+          "label": "wood",
+          "aliases": [
+            "wood"
+          ],
+          "source_chunks": [
+            "chunk_011",
+            "chunk_011"
+          ],
+          "confidence": 0.9,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        }
+      },
+      "remedies": {
+        "remedies_water_fountain": {
+          "id": "remedies_water_fountain",
+          "type": "remedies",
+          "label": "water fountain",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_001"
+          ],
+          "confidence": 0.85,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "remedies_mirror": {
+          "id": "remedies_mirror",
+          "type": "remedies",
+          "label": "mirror",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_004"
+          ],
+          "confidence": 0.85,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "remedies_light": {
+          "id": "remedies_light",
+          "type": "remedies",
+          "label": "light",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_006"
+          ],
+          "confidence": 0.85,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "remedies_crystal": {
+          "id": "remedies_crystal",
+          "type": "remedies",
+          "label": "crystal",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_009"
+          ],
+          "confidence": 0.85,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "remedies_gemstone": {
+          "id": "remedies_gemstone",
+          "type": "remedies",
+          "label": "gemstone",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_009"
+          ],
+          "confidence": 0.85,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "remedies_metal_plate": {
+          "id": "remedies_metal_plate",
+          "type": "remedies",
+          "label": "metal plate",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_009"
+          ],
+          "confidence": 0.85,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "remedies_wind_chime": {
+          "id": "remedies_wind_chime",
+          "type": "remedies",
+          "label": "Wind chime",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_010"
+          ],
+          "confidence": 0.85,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "remedies_plant": {
+          "id": "remedies_plant",
+          "type": "remedies",
+          "label": "Plant",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_015"
+          ],
+          "confidence": 0.85,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        }
+      },
+      "health_impacts": {
+        "health_impacts_wealth": {
+          "id": "health_impacts_wealth",
+          "type": "health_impacts",
+          "label": "wealth",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_001"
+          ],
+          "confidence": 0.8,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "health_impacts_prosperity": {
+          "id": "health_impacts_prosperity",
+          "type": "health_impacts",
+          "label": "prosperity",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_001"
+          ],
+          "confidence": 0.8,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "health_impacts_career": {
+          "id": "health_impacts_career",
+          "type": "health_impacts",
+          "label": "career",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_001"
+          ],
+          "confidence": 0.8,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "health_impacts_energy": {
+          "id": "health_impacts_energy",
+          "type": "health_impacts",
+          "label": "energy",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_001"
+          ],
+          "confidence": 0.8,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "health_impacts_sleep": {
+          "id": "health_impacts_sleep",
+          "type": "health_impacts",
+          "label": "sleep",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_004"
+          ],
+          "confidence": 0.8,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        }
+      },
+      "energies": {
+        "energies_spiritual_energy": {
+          "id": "energies_spiritual_energy",
+          "type": "energies",
+          "label": "spiritual energy",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_001"
+          ],
+          "confidence": 0.8,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "energies_positive_energy": {
+          "id": "energies_positive_energy",
+          "type": "energies",
+          "label": "positive energy",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_003"
+          ],
+          "confidence": 0.8,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "energies_chi": {
+          "id": "energies_chi",
+          "type": "energies",
+          "label": "chi",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_010"
+          ],
+          "confidence": 0.8,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "energies_negative_energy": {
+          "id": "energies_negative_energy",
+          "type": "energies",
+          "label": "negative energy",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_015"
+          ],
+          "confidence": 0.8,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        }
+      },
+      "water_features": {
+        "water_features_fountain": {
+          "id": "water_features_fountain",
+          "type": "water_features",
+          "label": "fountain",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_001"
+          ],
+          "confidence": 0.85,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "water_features_aquarium": {
+          "id": "water_features_aquarium",
+          "type": "water_features",
+          "label": "aquarium",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_001"
+          ],
+          "confidence": 0.85,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "water_features_well": {
+          "id": "water_features_well",
+          "type": "water_features",
+          "label": "well",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_006"
+          ],
+          "confidence": 0.85,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        }
+      },
+      "colors": {
+        "colors_red": {
+          "id": "colors_red",
+          "type": "colors",
+          "label": "red",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_002"
+          ],
+          "confidence": 0.85,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "colors_orange": {
+          "id": "colors_orange",
+          "type": "colors",
+          "label": "orange",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_002"
+          ],
+          "confidence": 0.85,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "colors_blue": {
+          "id": "colors_blue",
+          "type": "colors",
+          "label": "blue",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_014"
+          ],
+          "confidence": 0.85,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "colors_green": {
+          "id": "colors_green",
+          "type": "colors",
+          "label": "green",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_014"
+          ],
+          "confidence": 0.85,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "colors_yellow": {
+          "id": "colors_yellow",
+          "type": "colors",
+          "label": "yellow",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_014"
+          ],
+          "confidence": 0.85,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "colors_white": {
+          "id": "colors_white",
+          "type": "colors",
+          "label": "white",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_014"
+          ],
+          "confidence": 0.85,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        }
+      },
+      "materials": {
+        "materials_paint": {
+          "id": "materials_paint",
+          "type": "materials",
+          "label": "paint",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_002"
+          ],
+          "confidence": 0.85,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "materials_copper": {
+          "id": "materials_copper",
+          "type": "materials",
+          "label": "Copper",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_009"
+          ],
+          "confidence": 0.85,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "materials_brass": {
+          "id": "materials_brass",
+          "type": "materials",
+          "label": "brass",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_009"
+          ],
+          "confidence": 0.85,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        }
+      },
+      "architectural_elements": {
+        "architectural_elements_wall": {
+          "id": "architectural_elements_wall",
+          "type": "architectural_elements",
+          "label": "wall",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_002"
+          ],
+          "confidence": 0.85,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "architectural_elements_door": {
+          "id": "architectural_elements_door",
+          "type": "architectural_elements",
+          "label": "door",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_011"
+          ],
+          "confidence": 0.85,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "architectural_elements_pillar": {
+          "id": "architectural_elements_pillar",
+          "type": "architectural_elements",
+          "label": "pillar",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_013"
+          ],
+          "confidence": 0.85,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        }
+      },
+      "rooms": {
+        "rooms_entrance": {
+          "id": "rooms_entrance",
+          "type": "rooms",
+          "label": "entrance",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_003"
+          ],
+          "confidence": 0.9,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "rooms_bedroom": {
+          "id": "rooms_bedroom",
+          "type": "rooms",
+          "label": "bedroom",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_004"
+          ],
+          "confidence": 0.9,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "rooms_kitchen": {
+          "id": "rooms_kitchen",
+          "type": "rooms",
+          "label": "kitchen",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_005"
+          ],
+          "confidence": 0.9,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "rooms_pooja_room": {
+          "id": "rooms_pooja_room",
+          "type": "rooms",
+          "label": "pooja room",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_006"
+          ],
+          "confidence": 0.9,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "rooms_prayer_room": {
+          "id": "rooms_prayer_room",
+          "type": "rooms",
+          "label": "prayer room",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_006"
+          ],
+          "confidence": 0.9,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "rooms_staircase": {
+          "id": "rooms_staircase",
+          "type": "rooms",
+          "label": "Staircase",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_012"
+          ],
+          "confidence": 0.9,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        }
+      },
+      "principles": {
+        "principles_flow": {
+          "id": "principles_flow",
+          "type": "principles",
+          "label": "flow",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_003"
+          ],
+          "confidence": 0.8,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "principles_natural_light": {
+          "id": "principles_natural_light",
+          "type": "principles",
+          "label": "Natural light",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_006"
+          ],
+          "confidence": 0.8,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "principles_five_elements": {
+          "id": "principles_five_elements",
+          "type": "principles",
+          "label": "five elements",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_008"
+          ],
+          "confidence": 0.8,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "principles_balance": {
+          "id": "principles_balance",
+          "type": "principles",
+          "label": "Balance",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_008"
+          ],
+          "confidence": 0.8,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        }
+      },
+      "obstacles": {
+        "obstacles_clutter": {
+          "id": "obstacles_clutter",
+          "type": "obstacles",
+          "label": "clutter",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_006"
+          ],
+          "confidence": 0.75,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "obstacles_blockage": {
+          "id": "obstacles_blockage",
+          "type": "obstacles",
+          "label": "blockage",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_011"
+          ],
+          "confidence": 0.75,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "obstacles_dead_plants": {
+          "id": "obstacles_dead_plants",
+          "type": "obstacles",
+          "label": "dead plants",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_015"
+          ],
+          "confidence": 0.75,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        }
+      },
+      "shapes": {
+        "shapes_square": {
+          "id": "shapes_square",
+          "type": "shapes",
+          "label": "Square",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_012"
+          ],
+          "confidence": 0.85,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "shapes_l_shaped": {
+          "id": "shapes_l_shaped",
+          "type": "shapes",
+          "label": "L-shaped",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_012"
+          ],
+          "confidence": 0.85,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        },
+        "shapes_spiral": {
+          "id": "shapes_spiral",
+          "type": "shapes",
+          "label": "spiral",
+          "aliases": [],
+          "source_chunks": [
+            "chunk_012"
+          ],
+          "confidence": 0.85,
+          "metadata": {
+            "pattern_matched": true
+          },
+          "description": ""
+        }
+      }
+    }
+  }
+}
